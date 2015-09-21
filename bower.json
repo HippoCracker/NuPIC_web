@@ -1,0 +1,23 @@
+{
+  "name": "NuPIC_web",
+  "version": "1.0.0",
+  "homepage": "https://github.com/HippoCracker/NuPIC_web",
+  "authors": [
+    "Zesheng Zong <zong.ze@husky.neu.edu>"
+  ],
+  "description": "Web page for a NuPIC project",
+  "main": "index.html",
+  "keywords": [
+    "Web",
+    "page",
+    "NuPIC"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
