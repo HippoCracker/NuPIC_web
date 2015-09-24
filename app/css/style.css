@@ -1,3 +1,5 @@
+@import url("http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
 /* line 5, ../../../../../.rvm/gems/ruby-2.0.0-p643/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -61,4 +63,147 @@ a img {
 /* line 116, ../../../../../.rvm/gems/ruby-2.0.0-p643/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
+}
+
+/* line 4, ../components/sass/_base.scss */
+body {
+  background: #f5f5f5;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* line 9, ../components/sass/_layout.scss */
+.wrap {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 12, ../../../../../.rvm/gems/ruby-2.0.0-p643/gems/susy-2.2.5/sass/susy/output/support/_clearfix.scss */
+.wrap:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/* line 2, ../components/sass/_modules.scss */
+header {
+  background: #343c41;
+  box-shadow: 0 2px 10px rgba(41, 47, 51, 0.5);
+}
+/* line 3, ../components/sass/_mixins.scss */
+header:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/* line 8, ../components/sass/_modules.scss */
+header, .logo {
+  height: 64px;
+  line-height: 64px;
+}
+
+/* line 13, ../components/sass/_modules.scss */
+header li a {
+  height: 59px;
+  line-height: 64px;
+}
+
+/* line 3, ../components/sass/_mixins.scss */
+.wrap:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/* line 22, ../components/sass/_modules.scss */
+nav {
+  width: 81.01266%;
+  float: right;
+  margin-right: 0;
+}
+
+/* line 26, ../components/sass/_modules.scss */
+.logo {
+  width: 11.39241%;
+  float: left;
+  margin-right: 1.26582%;
+  text-align: center;
+  font-size: 2rem;
+  background: #D76666;
+  min-width: 50px;
+  color: #ffffff;
+  margin-right: 0;
+}
+/* line 35, ../components/sass/_modules.scss */
+.logo:hover {
+  background: #cc3e3e;
+}
+
+/* line 42, ../components/sass/_modules.scss */
+.left-actions {
+  width: 62.02532%;
+  float: left;
+  margin-right: 1.26582%;
+}
+/* line 3, ../components/sass/_mixins.scss */
+.left-actions:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 45, ../components/sass/_modules.scss */
+.left-actions li {
+  width: 17.72152%;
+  min-width: 90px;
+}
+
+/* line 52, ../components/sass/_modules.scss */
+.right-actions {
+  width: 11.39241%;
+  float: right;
+  margin-right: 0;
+  min-width: 100px;
+}
+/* line 3, ../components/sass/_mixins.scss */
+.right-actions:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/* line 58, ../components/sass/_modules.scss */
+nav a {
+  postion: relative;
+  bottom: -1px;
+  float: left;
+  font-size: 1.3rem;
+  text-align: center;
+  min-width: 40px;
+  text-decoration: none;
+  color: #ffffff;
+  display: inline-block;
+  width: 100%;
+}
+/* line 70, ../components/sass/_modules.scss */
+nav a:hover {
+  color: #b3b3b3;
+  border-bottom: 5px solid #D76666;
+}
+
+/* line 76, ../components/sass/_modules.scss */
+.active {
+  color: #b3b3b3;
+  border-bottom: 5px solid #D76666;
+}
+
+/* line 81, ../components/sass/_modules.scss */
+li {
+  float: left;
+  width: 50%;
+}
+/* line 3, ../components/sass/_mixins.scss */
+li:after {
+  content: " ";
+  display: block;
+  clear: both;
 }

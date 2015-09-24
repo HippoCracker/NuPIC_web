@@ -1,0 +1,11 @@
+// susy setup ----------------------------------------------
+$susy: (
+	columns: 16,
+	container: 1140px,
+	debug: (image: hide),
+	global-box-sizing: border-box
+);
+
+.wrap {
+	@include container();
+}

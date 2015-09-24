@@ -42,7 +42,29 @@ module.exports = function(grunt) {
 			html: {
 				files: ['<%= config.app %>/*.html']
 			} //html
-		} //watch
+		}, //watch
+
+		wiredep: {
+			app: {
+				src: ['<%= config.app %>/index.html'],
+			}//app
+		}//wiredep
 
 	}); // initConfig
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

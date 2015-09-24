@@ -7,9 +7,44 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<h1>Spandan need this page until weekend</h1>
+	<header>
+		<div class="wrap">
+			<section class="logo"><i class="fa fa-list"></i></section>
+			<nav>
+				<section class="left-actions">
+					<ul>
+						<li><a href="#" class="active">Home</a></li>
+						<li><a href="#">About</a></li>
+					</ul>
+				</section>
+				<secion class="right-actions">
+					<ul>
+						<li><a href="#"><i class="fa fa-bell"></i></a></li>
+						<li><a href="#"><i class="fa fa-cog"></i></a></li>
+					</ul>
+				</secion>
+			</nav>
+		</div>
+	</header>
+	<div class="contents">
+		<section class="banner">This is nupic program</section>
+		<section class="upload-form">
+			<form>
+				<textarea name="input-text">Try some sentences... :-)</textarea>
+				<button name="submit-btn">Click to submit</button>
+				<label for="file-upload">upload</label>
+				<input type="file" id ="file-upload" name="#">
+			</form>
+		</section>
+		<section class="results">
+			<p>The result is here!</p>
+		</section>
+	</div>
 
 	<script src="main.js"></script>
+	<!-- bower:js -->
+	<script src="../bower_components/jquery/dist/jquery.js"></script>
+	<!-- endbower -->
 	<!-- live reload -->
 	<script src="http://localhost:35729/livereload.js"></script>
 </body>
