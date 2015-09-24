@@ -1,4 +1,5 @@
 
+// header --------------------------------------------------------
 header {
 	@include cf;
 	background: lighten($black, 5%);
@@ -20,20 +21,20 @@ header li a {
 }
 
 nav {
-	@include span(13 last);
+	@include span(14 last);
 }
 
 .logo {
 	@include span(2);
 	text-align: center;
 	font-size: 2rem;
-	background: $red;
+	background: darken($blue, 10);
 	min-width: 50px;
 	color: $white;
 	margin-right: 0;
 
 	&:hover {
-		background: darken($red, 10%);
+		background: darken($blue, 10%);
 	}
 }//logo
 
@@ -41,7 +42,7 @@ nav {
 
 .left-actions {
 	@include cf;
-	@include span(10);
+	@include span(10 of 16);
 	li {
 		width: span(3);
 		min-width: 90px;
@@ -51,7 +52,7 @@ nav {
 
 .right-actions {
 	@include cf;
-	@include span(2 last);
+	@include span(2 of 16 last);
 	min-width: 100px;
 }//right-actions
 
@@ -69,13 +70,13 @@ nav a {
 
 	&:hover {
 		color: darken($white, 30%);
-		border-bottom: 5px solid $red;
+		border-bottom: 5px solid $blue;
 	}
 }//left-actions a, right-actions a
 
 .active {
-	color: darken($white, 30%);
-	border-bottom: 5px solid $red;
+	color: $blue;
+	border-bottom: 5px solid $blue;
 }
 
 li {
@@ -83,3 +84,92 @@ li {
 	float: left;
 	width: 50%;
 }
+
+// contents --------------------------------------------------------
+.contents {
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.banner {
+	height: 240px;
+	line-height: 240px;
+	text-align: center;
+	font-size: 3rem;
+	color: $black;
+	font-weight: 200;
+}
+
+.banner span {
+	font-weight: 500;
+}
+
+form {
+
+}
+
+.input-text {
+	@include span(10);
+	@include border-radius;
+	max-width: 560px;
+	height: 30px;
+	line-height: 30px;
+	outline: none;
+	resize: none;
+	border: 1px solid rgba($gray, .4);
+	font-size: 1rem;
+	color: lighten($black, 10);
+	padding: 8px 10px;
+}
+
+.submit-btn, .upload-btn{
+	position: relative;
+	top: 1px;
+	height: 36px;
+	line-height: 36px;
+	display: inline-block;
+	text-decoration: none;
+	background: $blue;
+	float: left;
+	padding: 5px 10px;
+	color: $white;
+
+	&:hover {
+		background: darken($blue, 10);
+	}
+}//submit-btn, upload-btn
+
+.submit-btn {
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-right: 1px solid $darkblue;
+}//submit-btn
+
+.upload-btn {
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}//upload-btn
+
+#file-upload {
+	display: none;
+}
+
+.btn-group {
+	@include cf;
+	@include span(12);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

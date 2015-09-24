@@ -6,6 +6,7 @@ $susy: (
 	global-box-sizing: border-box
 );
 
-.wrap {
+.wrap, .contents {
 	@include container();
 }
+
