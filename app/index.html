@@ -9,39 +9,70 @@
 <body>
 	<header>
 		<div class="wrap">
-			<section class="logo"><i class="fa fa-list"></i></section>
+			<section class="menu-btn">
+				<a href="#"><i class="fa fa-list"></i></a>
+			</section><!-- menu-btn -->
+			<section class="dropdown-menu main-menu hide">
+				<ul class="menu-options">
+					<li><a href="#">No option</a></li>
+					<li><a href="#">No option</a></li>
+				</ul>
+			</section><!-- dropdown-menu main-menu -->
 			<nav>
 				<section class="left-actions">
 					<ul>
 						<li><a href="#" class="active">Home</a></li>
 						<li><a href="#">Wiki</a></li>
 					</ul>
-				</section>
+				</section><!-- left-actions -->
 				<secion class="right-actions">
 					<ul>
 						<li><a href="#"><i class="fa fa-bell"></i></a></li>
 						<li><a href="#"><i class="fa fa-cog"></i></a></li>
 					</ul>
-				</secion>
+				</secion><!-- right-actions -->
+				<section class="dropdown-menu notification-menu hide">
+					<ul class="menu-options">
+						<li><a href="#">No option</a></li>
+						<li><a href="#">No option</a></li>
+					</ul>
+				</section><!-- dropdown-menu notification-menu -->
+				<section class="dropdown-menu settings-menu hide">
+					<ul class="menu-options">
+						<li><a href="#">No option</a></li>
+						<li><a href="#">No option</a></li>
+					</ul>
+				</section><!-- dropdown-menu settings-menu -->
 			</nav>
-		</div>
+		</div><!-- wrap -->
 	</header>
 	<div class="contents">
-		<section class="banner"><h1><span>NEU</span> Smart Engine</h1></section>
+		<section class="banner">
+			<h1><span>NEU</span> Smart Engine</h1>
+		</section><!-- banner -->
 		<section class="form-container">
 			<form>
-				<textarea class="input-text" placeholder="Try some sentences... :-)"></textarea>
-				<section class="btn-group">
-					<a href="#" class="submit-btn">Submit</a>
-					<label for="file-upload" class="upload-btn"><i class="fa fa-upload"></i></label>
-					<input type="file" id ="file-upload" name="#">
-				</section>
+				<section class="form-contents">
+					<textarea class="input-text" placeholder="Try some sentences... :-)"></textarea>
+					<section class="btn-group">
+						<a href="#" class="submit-btn">Submit</a>
+						<a href="#" class="drop-down-btn"><i class="fa fa-caret-square-o-down"></i></a>
+					</section><!-- btn-group -->
+				</section><!-- form-contents -->
+				<section class="dropdown-menu upload-menu hide">
+					<div class="menu-options">
+						<label for="file-upload" class="file-upload-btn"><i class="fa fa-upload"></i> Upload File</label>
+						<input type="file" id ="file-upload" name="#">
+						<label for="folder-upload" class="folder-upload-btn"><i class="fa fa-folder"></i> Upload Folder</label>
+						<input type="file" id ="folder-upload" name="#">
+					</div><!-- menu-options -->
+				</section><!-- dropdown-menu -->
 			</form>
-		</section>
-		<section class="results">
+		</section><!-- form-contents -->
+		<section class="process-results-container">
 			<p>The result is here!</p>
-		</section>
-	</div>
+		</section><!-- process-results-container -->
+	</div><!-- contents -->
 
 	<script src="main.js"></script>
 	<!-- bower:js -->

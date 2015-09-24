@@ -6,7 +6,120 @@ $susy: (
 	global-box-sizing: border-box
 );
 
+@include border-box-sizing;
+
+$small	: 5em;
+$medium	: 31em;
+$large	: 56em;
+
+
+
 .wrap, .contents {
 	@include container();
 }
 
+/* ---------------------------------------------
+Small --> Medium
+-----------------------------------------------*/
+@include susy-breakpoint($small $medium, 16) {
+
+	.menu {
+		@include span(2);
+	}
+
+	nav {
+		@include span(13 last);
+
+		.left-actions {
+		  @include span(10);
+		}
+
+		.right-actions {
+			@include span(4 last);
+		}
+	}
+
+	.banner {
+		font-size: 2.2rem;
+		height: 180px;
+	}//banner
+
+	.input-text {
+		@include span(10);
+		margin-left: 20px;
+	}//input-text
+
+	.btn-group {
+		@include span(6 last);
+	}
+
+	.submit-btn, .drop-down-btn {
+		font-size: .9rem;
+	}//submit-btn, drop-down-btn
+
+}// $small --> $medium
+
+
+/* ---------------------------------------------
+Medium --> large
+-----------------------------------------------*/
+@include susy-breakpoint($medium $large, 16) {
+
+	.banner {
+		font-size: 3rem;
+		height: 240px;
+	}//banner
+	
+	.menu {
+		@include span(2);
+	}//menu
+
+	nav {
+		@include span(13 last);
+
+		.left-actions {
+		  @include span(10);
+		}//left-actions
+
+		.right-actions {
+			@include span(4 last);
+		}//right-actions
+	}//nav
+
+	.input-text {
+		@include span(12);
+	}//input-text
+
+}// $medium --> $large
+
+/* ---------------------------------------------
+large
+-----------------------------------------------*/
+@include susy-breakpoint($large, 16) {
+
+	.banner {
+		font-size: 3rem;
+		height: 240px;
+	}//banner
+
+	.menu {
+		@include span(2);
+	}//menu
+
+	nav {
+		@include span(13 last);
+
+		.left-actions {
+		  @include span(10);
+		}//left-actions
+
+		.right-actions {
+			@include span(4 last);
+		}//right-actions
+	}//nav
+
+	.input-text {
+		@include span(13);
+	}//input-text
+
+}// $medium 
