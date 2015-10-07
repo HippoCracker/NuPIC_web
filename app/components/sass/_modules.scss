@@ -2,12 +2,20 @@
 	display: none;
 }
 
+.wrap {
+	max-width: 960px;
+}
+
 
 // header --------------------------------------------------------
-header {
+header.nav-bar {
 	@include cf;
+	position: fixed;
+	top: 0;
+	width: 100%;
 	background: lighten($black, 5%);
-	box-shadow: 0 2px 10px rgba($black, .5);
+	z-index: $header-z-index;
+	box-shadow: 0 2px 10px rgba($black, .5),  0 0 30px rgba($black, .4) inset;
 }
 
 header, .menu-btn, header li a { 
@@ -33,9 +41,10 @@ header, .menu-btn, header li a {
 		color: $white;
 		display: inline-block;
 		background: darken($blue, 10);
-		box-shadow: -2px 0 10px rgba($black, .6) inset;
+		box-shadow: 0 0 4px rgba($black, .4) inset, 0 -4px 10px rgba($black, 1);
 		&:hover {
 			background: darken($blue, 15);
+			color: darken($white, 15);
 		}//&:hover
 	}//a
 }//logo
@@ -86,15 +95,13 @@ header, .menu-btn, header li a {
 	}
 }//left-actions a, right-actions a
 
-a.active {
+.nav-bar a.active {
 	color: $blue;
 	border-bottom: 5px solid $blue;
 }
 
-li {
-	@include cf;
+.nav-bar li {
 	float: left;
-	width: 50%;
 }
 
 // contents --------------------------------------------------------
@@ -107,6 +114,7 @@ form {
 }
 
 .contents {
+	z-index: $contents-z-index;
 	margin-left: auto;
 	margin-right: auto;
 }//contents
@@ -116,6 +124,7 @@ form {
 	text-align: center;
 	color: $black;
 	font-weight: 200;
+	margin-top: 100px;
 }//banner
 
 .banner span {
@@ -134,12 +143,13 @@ form {
 	max-width: 560px;
 	height: 46px;
 	line-height: 28px;
-	outline: none;
-	resize: none;
 	border: 1px solid rgba($gray, .4);
 	font-size: 1rem;
-	color: lighten($black, 10);
+	font-family: $font-primary;
 	padding: 8px 10px;
+	color: lighten($black, 10);
+	outline: none;
+	resize: none;
 }//input-text
 
 .btn-group {
@@ -149,7 +159,7 @@ form {
 	float: left;
 }//btn-group
 
-.submit-btn, .drop-down-btn {
+.btn {
 	height: 46px;
 	line-height: 36px;
 	display: inline-block;
@@ -168,13 +178,13 @@ form {
 	border-top-left-radius: 5px;
 	border-bottom-left-radius: 5px;
 	border-right: 1px solid $darkblue;
-	box-shadow: 2px 0 6px rgba($black, .4) inset, -1px 0 2px rgba($black, .2);
+	box-shadow: 2px 0 6px rgba($black, .4) inset, -1px 0 1px rgba($black, .3);
 }//submit-btn
 
 .drop-down-btn {
 	border-top-right-radius: 5px;
 	border-bottom-right-radius: 5px;
-	box-shadow: -2px 0 6px rgba($black, .4) inset, 1px 0 2px rgba($black, .2);
+	box-shadow: -2px 0 6px rgba($black, .4) inset, 1px 0 1px rgba($black, .3);
 }//drop-down-btn
 
 #file-upload, #folder-upload {
@@ -187,7 +197,7 @@ form {
 	@include border-radius;
 	position: absolute;
 	background: $white;
-	box-shadow: 0 0 2px rgba($black, .4), 0 0 10px rgba($black, .2) inset;
+	box-shadow: 0 0 2px rgba($black, .4);
 }
 
 .menu-options {
@@ -264,11 +274,116 @@ form {
 }
 
 
+// result --------------------------------------------------------
+
+.process-results-container {
+	margin-top: 80px;
+	margin-bottom: 100px;
+	background: $white;
+}//process-results-container
+
+.result-download-contents {
+	color: $black;
+	box-shadow: 0 2px 5px rgba($black, .5);
+
+}//process-results
+
+// header ---------------------------------------------
+.results-nav {
+	height: 60px;
+	background: $lightgray;
+}//results-nav
+
+.results-nav nav {
+	height: inherit;
+	float: none;
+	margin-left: 50px;
+}
+
+.nav-options {
+	max-width: 280px;
+	height: inherit;
+	box-shadow: 0px -1px 1.5px rgba($black, .2);
+	@include cf;
+
+	li {
+		width: 140px;
+		height: inherit;
+		float: left;
+	}//li
+
+	a {
+		width: 100%;
+		height: 100%;
+		background: darken($white, 15);
+		display: inline-block;
+		color: $black;
+		font-size: 1.2rem;
+		font-weight: 500;
+		text-decoration: none;
+		font-family: $font-primary;
+		text-align: center;
+		z-index: $inactive-z-index;
+	}//a
+
+	a.left-label {
+		box-shadow: -3px -3px 3px rgba($black, .1) inset;
+	}
+
+	a.right-label {
+		box-shadow: 3px -3px 3px rgba($black, .1) inset;
+	}
+
+	a.active {
+		background: $white;
+		box-shadow: none;
+	}
+}//nav-options
+
+.download-options {
+	@include cf;
+	width: 50%;
+	margin-right: auto;
+	margin-left: auto;
+
+	li {
+		float: left;
+		height: 80px;
+		line-height: 80px;
+		padding-left: 30px;
+	}
+
+	.download-btn {
+		display: inline-block;
+		background: $blue;
+		width: 100px;
+		height: 45px;
+		line-height: 45px;
+		text-decoration: none;
+		font-size: 1.2rem;
+		color: $white;
+		text-align: center;
+		border-radius: $default-border-radius;
+		box-shadow: 0 0 8px rgba($black, .4) inset, 0 0 6px rgba($black, .3);
+
+		&:hover {
+			background: darken($blue, 15);
+		}
+	}
+
+}
 
 
 
-
-
+// footer ---------------------------------------------
+footer {
+	height: 60px;
+	line-height: 60px;
+	color: darken($white, 15);
+	font-size: 1.1rem;
+	background: lighten($black, 5%);
+	box-shadow: 0 0 6px rgba($black, .4);
+}
 
 
 

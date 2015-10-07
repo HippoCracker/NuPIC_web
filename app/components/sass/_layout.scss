@@ -51,11 +51,15 @@ Small --> Medium
 
 	.btn-group {
 		@include span(6 last);
-	}
+	}//btn-group
 
 	.submit-btn, .drop-down-btn {
 		font-size: .9rem;
 	}//submit-btn, drop-down-btn
+
+	.process-results {
+		padding: 50px 30px;
+	}//process-results
 
 }// $small --> $medium
 
@@ -90,6 +94,10 @@ Medium --> large
 		@include span(12);
 	}//input-text
 
+	.process-results {
+		padding: 80px 30px;
+	}//process-results
+
 }// $medium --> $large
 
 /* ---------------------------------------------
@@ -121,5 +129,11 @@ large
 	.input-text {
 		@include span(13);
 	}//input-text
+
+	
+	.process-results {
+		padding: 50px 100px;
+		line-height: 30px;
+	}//process-results
 
 }// $medium 

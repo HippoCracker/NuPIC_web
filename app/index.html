@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>NuPIC</title>
+	<title>NEU Smart Engine | Sentence context detection</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<header>
+	<header class="nav-bar">
 		<div class="wrap">
 			<section class="menu-btn">
 				<a href="#"><i class="fa fa-list"></i></a>
@@ -55,11 +55,11 @@
 				<section class="form-contents">
 					<textarea class="input-text" placeholder="Try some sentences... :-)"></textarea>
 					<section class="btn-group">
-						<a href="#" class="submit-btn">Submit</a>
-						<a href="#" class="drop-down-btn"><i class="fa fa-caret-square-o-down"></i></a>
+						<a href="#" class="submit-btn btn">Submit</a>
+						<a href="#" class="drop-down-btn btn"><i class="fa fa-caret-square-o-down"></i></a>
 					</section><!-- btn-group -->
 				</section><!-- form-contents -->
-				<section class="dropdown-menu upload-menu hide">
+				<section class="dropdown-menu upload-menu">
 					<div class="menu-options">
 						<label for="file-upload" class="file-upload-btn"><i class="fa fa-upload"></i> Upload File</label>
 						<input type="file" id ="file-upload" name="#">
@@ -69,10 +69,43 @@
 				</section><!-- dropdown-menu -->
 			</form>
 		</section><!-- form-contents -->
-		<section class="process-results-container">
-			<p>The result is here!</p>
-		</section><!-- process-results-container -->
+		
+		<div class="wrap">
+			<section class="process-results-container">
+				<header class="results-nav">
+					<nav>
+						<ul class="nav-options">
+							<li><a href="#" class="left-label">Result</a></li>
+							<li><a href="#" class="active right-label">Download</a></li>
+						</ul>
+					</nav>
+				</header><!-- results-nav -->
+				<div class="result-download-contents">
+					<section class="process-results">
+						<p>
+						<span>Nihil minima tenetur voluptates repudiandae earum quam vel, sequi eveniet velit non perferendis, odio voluptate amet consequuntur voluptas voluptatum temporibus debitis, quia ea! Vel beatae distinctio sunt architecto earum perspiciatis.</span>
+						<span>Consequuntur impedit et ea aut optio pariatur architecto ipsum natus. Dolorem, magni, ullam. Libero officia praesentium, magnam odio voluptates iste eius nulla laudantium commodi nemo laboriosam, perferendis ullam nihil nisi?</span>
+						<span>Illo cupiditate fugit, rem similique eum sapiente. Facere, nesciunt magni adipisci consequatur ab commodi repudiandae distinctio, eos perferendis nostrum vel earum omnis quod error aliquid. Aut accusantium eligendi qui asperiores.</span>
+						</p>
+					</section><!-- process-results -->
+					<section class="download-options-container">
+						<ul class="download-options">
+							<li><a href="#" class="download-btn">pdf</a></li>
+							<li><a href="#" class="download-btn">txt</a></li>
+							<li><a href="#" class="download-btn">csv</a></li>
+						</ul>
+					</section><!-- download-options -->
+				</div><!-- result-download-contents -->
+			</section><!-- process-results-container -->
+		</div><!-- wrap -->
 	</div><!-- contents -->
+	<footer>
+		<div class="wrap">
+			<section>
+				<p>College of Engineering | Northeastern University</p>
+			</section>
+		</div>
+	</footer>
 
 	<script src="main.js"></script>
 	<!-- bower:js -->
