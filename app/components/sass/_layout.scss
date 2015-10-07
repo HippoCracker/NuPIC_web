@@ -61,6 +61,10 @@ Small --> Medium
 		padding: 50px 30px;
 	}//process-results
 
+	.download-options {
+		width: 150px;
+	}//download-options
+
 }// $small --> $medium
 
 
@@ -97,6 +101,11 @@ Medium --> large
 	.process-results {
 		padding: 80px 30px;
 	}//process-results
+	
+	.download-options {
+		width: 420px;
+	}//download-options
+
 
 }// $medium --> $large
 
@@ -129,11 +138,19 @@ large
 	.input-text {
 		@include span(13);
 	}//input-text
-
 	
 	.process-results {
 		padding: 50px 100px;
 		line-height: 30px;
 	}//process-results
+
+	.download-options {
+		width: 420px;
+	}//download-options
+
+	.download-options-container {
+		height: 300px;
+		line-height: 200px;
+	}//download-options-container
 
 }// $medium 

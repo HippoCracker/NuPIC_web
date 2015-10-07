@@ -288,7 +288,7 @@ form {
 
 }//process-results
 
-// header ---------------------------------------------
+// results header ---------------------------------------------
 .results-nav {
 	height: 60px;
 	background: $lightgray;
@@ -324,34 +324,37 @@ form {
 		font-family: $font-primary;
 		text-align: center;
 		z-index: $inactive-z-index;
+
+		&:hover {
+			background: $lightgray;
+		}
 	}//a
 
 	a.left-label {
 		box-shadow: -3px -3px 3px rgba($black, .1) inset;
-	}
+	}//left-label
 
 	a.right-label {
 		box-shadow: 3px -3px 3px rgba($black, .1) inset;
-	}
+	}//right-label
 
 	a.active {
 		background: $white;
 		box-shadow: none;
-	}
+	}//active
 }//nav-options
 
 .download-options {
 	@include cf;
-	width: 50%;
 	margin-right: auto;
 	margin-left: auto;
 
 	li {
-		float: left;
+		display: inline-block;
 		height: 80px;
 		line-height: 80px;
 		padding-left: 30px;
-	}
+	}//li
 
 	.download-btn {
 		display: inline-block;
@@ -368,10 +371,10 @@ form {
 
 		&:hover {
 			background: darken($blue, 15);
-		}
-	}
+		}//hover
+	}//download-btn
 
-}
+}//download-options
 
 
 
@@ -383,7 +386,7 @@ footer {
 	font-size: 1.1rem;
 	background: lighten($black, 5%);
 	box-shadow: 0 0 6px rgba($black, .4);
-}
+}//footer
 
 
 

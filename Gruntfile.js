@@ -24,7 +24,11 @@ module.exports = function(grunt) {
 		uglify: {
 			my_target: {
 				files: {
-					'<%= config.app %>/js/main.js': ['<%= config.app %>/components/js/main.js']
+					'<%= config.app %>/js/main.js': [
+												'<%= config.app %>/components/js/main.js',
+												'<%= config.app %>/components/js/controller.js',
+												'<%= config.app %>/components/js/dom.js'
+												]
 				}
 			}
 		},//uglify
@@ -32,7 +36,11 @@ module.exports = function(grunt) {
 		watch: {
 			options: { livereload: true },
 			scripts: {
-				files: ['<%= config.app %>/components/js/main.js'],
+				files: [
+								'<%= config.app %>/components/js/main.js',
+								'<%= config.app %>/components/js/controller.js',
+								'<%= config.app %>/components/js/dom.js'
+							 ],
 				tasks: ['uglify']
 			}, //scripts
 			sass: {

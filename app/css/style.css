@@ -151,102 +151,123 @@ Small --> Medium
   .process-results {
     padding: 50px 30px;
   }
+
+  /* line 64, ../components/sass/_layout.scss */
+  .download-options {
+    width: 150px;
+  }
 }
 /* ---------------------------------------------
 Medium --> large
 -----------------------------------------------*/
 @media (min-width: 31em) and (max-width: 56em) {
-  /* line 72, ../components/sass/_layout.scss */
+  /* line 76, ../components/sass/_layout.scss */
   .banner {
     font-size: 3rem;
     height: 240px;
   }
 
-  /* line 77, ../components/sass/_layout.scss */
+  /* line 81, ../components/sass/_layout.scss */
   .menu {
     width: 11.39241%;
     float: left;
     margin-right: 1.26582%;
   }
 
-  /* line 81, ../components/sass/_layout.scss */
+  /* line 85, ../components/sass/_layout.scss */
   nav {
     width: 81.01266%;
     float: right;
     margin-right: 0;
   }
-  /* line 84, ../components/sass/_layout.scss */
+  /* line 88, ../components/sass/_layout.scss */
   nav .left-actions {
     width: 62.02532%;
     float: left;
     margin-right: 1.26582%;
   }
-  /* line 88, ../components/sass/_layout.scss */
+  /* line 92, ../components/sass/_layout.scss */
   nav .right-actions {
     width: 24.05063%;
     float: right;
     margin-right: 0;
   }
 
-  /* line 93, ../components/sass/_layout.scss */
+  /* line 97, ../components/sass/_layout.scss */
   .input-text {
     width: 74.68354%;
     float: left;
     margin-right: 1.26582%;
   }
 
-  /* line 97, ../components/sass/_layout.scss */
+  /* line 101, ../components/sass/_layout.scss */
   .process-results {
     padding: 80px 30px;
+  }
+
+  /* line 105, ../components/sass/_layout.scss */
+  .download-options {
+    width: 420px;
   }
 }
 /* ---------------------------------------------
 large
 -----------------------------------------------*/
 @media (min-width: 56em) {
-  /* line 108, ../components/sass/_layout.scss */
+  /* line 117, ../components/sass/_layout.scss */
   .banner {
     font-size: 3rem;
     height: 240px;
   }
 
-  /* line 113, ../components/sass/_layout.scss */
+  /* line 122, ../components/sass/_layout.scss */
   .menu {
     width: 11.39241%;
     float: left;
     margin-right: 1.26582%;
   }
 
-  /* line 117, ../components/sass/_layout.scss */
+  /* line 126, ../components/sass/_layout.scss */
   nav {
     width: 81.01266%;
     float: right;
     margin-right: 0;
   }
-  /* line 120, ../components/sass/_layout.scss */
+  /* line 129, ../components/sass/_layout.scss */
   nav .left-actions {
     width: 62.02532%;
     float: left;
     margin-right: 1.26582%;
   }
-  /* line 124, ../components/sass/_layout.scss */
+  /* line 133, ../components/sass/_layout.scss */
   nav .right-actions {
     width: 24.05063%;
     float: right;
     margin-right: 0;
   }
 
-  /* line 129, ../components/sass/_layout.scss */
+  /* line 138, ../components/sass/_layout.scss */
   .input-text {
     width: 81.01266%;
     float: left;
     margin-right: 1.26582%;
   }
 
-  /* line 134, ../components/sass/_layout.scss */
+  /* line 142, ../components/sass/_layout.scss */
   .process-results {
     padding: 50px 100px;
     line-height: 30px;
+  }
+
+  /* line 147, ../components/sass/_layout.scss */
+  .download-options {
+    width: 420px;
+  }
+
+  /* line 151, ../components/sass/_layout.scss */
+  .download-options-container {
+    height: 300px;
+    line-height: 200px;
   }
 }
 /* line 1, ../components/sass/_modules.scss */
@@ -626,23 +647,26 @@ form {
   text-align: center;
   z-index: -1;
 }
-/* line 329, ../components/sass/_modules.scss */
+/* line 328, ../components/sass/_modules.scss */
+.nav-options a:hover {
+  background: #f5f5f5;
+}
+/* line 333, ../components/sass/_modules.scss */
 .nav-options a.left-label {
   box-shadow: -3px -3px 3px rgba(41, 47, 51, 0.1) inset;
 }
-/* line 333, ../components/sass/_modules.scss */
+/* line 337, ../components/sass/_modules.scss */
 .nav-options a.right-label {
   box-shadow: 3px -3px 3px rgba(41, 47, 51, 0.1) inset;
 }
-/* line 337, ../components/sass/_modules.scss */
+/* line 341, ../components/sass/_modules.scss */
 .nav-options a.active {
   background: #ffffff;
   box-shadow: none;
 }
 
-/* line 343, ../components/sass/_modules.scss */
+/* line 347, ../components/sass/_modules.scss */
 .download-options {
-  width: 50%;
   margin-right: auto;
   margin-left: auto;
 }
@@ -652,14 +676,14 @@ form {
   display: block;
   clear: both;
 }
-/* line 349, ../components/sass/_modules.scss */
+/* line 352, ../components/sass/_modules.scss */
 .download-options li {
-  float: left;
+  display: inline-block;
   height: 80px;
   line-height: 80px;
   padding-left: 30px;
 }
-/* line 356, ../components/sass/_modules.scss */
+/* line 359, ../components/sass/_modules.scss */
 .download-options .download-btn {
   display: inline-block;
   background: #55ACEE;
@@ -673,12 +697,12 @@ form {
   border-radius: 5px;
   box-shadow: 0 0 8px rgba(41, 47, 51, 0.4) inset, 0 0 6px rgba(41, 47, 51, 0.3);
 }
-/* line 369, ../components/sass/_modules.scss */
+/* line 372, ../components/sass/_modules.scss */
 .download-options .download-btn:hover {
   background: #1689e0;
 }
 
-/* line 379, ../components/sass/_modules.scss */
+/* line 382, ../components/sass/_modules.scss */
 footer {
   height: 60px;
   line-height: 60px;

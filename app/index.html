@@ -12,7 +12,7 @@
 			<section class="menu-btn">
 				<a href="#"><i class="fa fa-list"></i></a>
 			</section><!-- menu-btn -->
-			<section class="dropdown-menu main-menu hide">
+			<section id="main-submenu" class="dropdown-menu main-menu hide">
 				<ul class="menu-options">
 					<li><a href="#">No option</a></li>
 					<li><a href="#">No option</a></li>
@@ -27,17 +27,17 @@
 				</section><!-- left-actions -->
 				<secion class="right-actions">
 					<ul>
-						<li><a href="#"><i class="fa fa-bell"></i></a></li>
-						<li><a href="#"><i class="fa fa-cog"></i></a></li>
+						<li><a id="notify-btn" href="#"><i class="fa fa-bell"></i></a></li>
+						<li><a id="settings-btn" href="#"><i class="fa fa-cog"></i></a></li>
 					</ul>
 				</secion><!-- right-actions -->
-				<section class="dropdown-menu notification-menu hide">
+				<section id="notify-submenu" class="dropdown-menu notification-menu hide">
 					<ul class="menu-options">
 						<li><a href="#">No option</a></li>
 						<li><a href="#">No option</a></li>
 					</ul>
 				</section><!-- dropdown-menu notification-menu -->
-				<section class="dropdown-menu settings-menu hide">
+				<section id="settings-submenu" class="dropdown-menu settings-menu hide">
 					<ul class="menu-options">
 						<li><a href="#">No option</a></li>
 						<li><a href="#">No option</a></li>
@@ -55,11 +55,11 @@
 				<section class="form-contents">
 					<textarea class="input-text" placeholder="Try some sentences... :-)"></textarea>
 					<section class="btn-group">
-						<a href="#" class="submit-btn btn">Submit</a>
-						<a href="#" class="drop-down-btn btn"><i class="fa fa-caret-square-o-down"></i></a>
+						<a href="#" id="submit-btn" class="submit-btn btn">Submit</a>
+						<a href="#" id="submit-dropdown-btn" class="drop-down-btn btn"><i class="fa fa-caret-square-o-down"></i></a>
 					</section><!-- btn-group -->
 				</section><!-- form-contents -->
-				<section class="dropdown-menu upload-menu">
+				<section id="upload-submenu" class="dropdown-menu upload-menu hide">
 					<div class="menu-options">
 						<label for="file-upload" class="file-upload-btn"><i class="fa fa-upload"></i> Upload File</label>
 						<input type="file" id ="file-upload" name="#">
@@ -107,11 +107,14 @@
 		</div>
 	</footer>
 
-	<script src="main.js"></script>
 	<!-- bower:js -->
 	<script src="../bower_components/jquery/dist/jquery.js"></script>
 	<!-- endbower -->
 	<!-- live reload -->
 	<script src="http://localhost:35729/livereload.js"></script>
+
+
+	<script src="components/js/dom.js"></script>
+
 </body>
 </html>
