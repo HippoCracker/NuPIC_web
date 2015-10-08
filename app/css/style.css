@@ -594,28 +594,29 @@ form {
   margin-top: 80px;
   margin-bottom: 100px;
   background: #ffffff;
+  min-height: 300px;
 }
 
-/* line 285, ../components/sass/_modules.scss */
-.result-download-contents {
+/* line 286, ../components/sass/_modules.scss */
+.result-download-container {
   color: #292f33;
   box-shadow: 0 2px 5px rgba(41, 47, 51, 0.5);
 }
 
-/* line 292, ../components/sass/_modules.scss */
+/* line 293, ../components/sass/_modules.scss */
 .results-nav {
   height: 60px;
   background: #f5f5f5;
 }
 
-/* line 297, ../components/sass/_modules.scss */
+/* line 298, ../components/sass/_modules.scss */
 .results-nav nav {
   height: inherit;
   float: none;
   margin-left: 50px;
 }
 
-/* line 303, ../components/sass/_modules.scss */
+/* line 304, ../components/sass/_modules.scss */
 .nav-options {
   max-width: 280px;
   height: inherit;
@@ -627,13 +628,13 @@ form {
   display: block;
   clear: both;
 }
-/* line 309, ../components/sass/_modules.scss */
+/* line 310, ../components/sass/_modules.scss */
 .nav-options li {
   width: 140px;
   height: inherit;
   float: left;
 }
-/* line 315, ../components/sass/_modules.scss */
+/* line 316, ../components/sass/_modules.scss */
 .nav-options a {
   width: 100%;
   height: 100%;
@@ -647,25 +648,25 @@ form {
   text-align: center;
   z-index: -1;
 }
-/* line 328, ../components/sass/_modules.scss */
+/* line 329, ../components/sass/_modules.scss */
 .nav-options a:hover {
   background: #f5f5f5;
 }
-/* line 333, ../components/sass/_modules.scss */
+/* line 334, ../components/sass/_modules.scss */
 .nav-options a.left-label {
   box-shadow: -3px -3px 3px rgba(41, 47, 51, 0.1) inset;
 }
-/* line 337, ../components/sass/_modules.scss */
+/* line 338, ../components/sass/_modules.scss */
 .nav-options a.right-label {
   box-shadow: 3px -3px 3px rgba(41, 47, 51, 0.1) inset;
 }
-/* line 341, ../components/sass/_modules.scss */
+/* line 342, ../components/sass/_modules.scss */
 .nav-options a.active {
   background: #ffffff;
   box-shadow: none;
 }
 
-/* line 347, ../components/sass/_modules.scss */
+/* line 348, ../components/sass/_modules.scss */
 .download-options {
   margin-right: auto;
   margin-left: auto;
@@ -676,14 +677,14 @@ form {
   display: block;
   clear: both;
 }
-/* line 352, ../components/sass/_modules.scss */
+/* line 353, ../components/sass/_modules.scss */
 .download-options li {
   display: inline-block;
   height: 80px;
   line-height: 80px;
   padding-left: 30px;
 }
-/* line 359, ../components/sass/_modules.scss */
+/* line 360, ../components/sass/_modules.scss */
 .download-options .download-btn {
   display: inline-block;
   background: #55ACEE;
@@ -697,12 +698,12 @@ form {
   border-radius: 5px;
   box-shadow: 0 0 8px rgba(41, 47, 51, 0.4) inset, 0 0 6px rgba(41, 47, 51, 0.3);
 }
-/* line 372, ../components/sass/_modules.scss */
+/* line 373, ../components/sass/_modules.scss */
 .download-options .download-btn:hover {
   background: #1689e0;
 }
 
-/* line 382, ../components/sass/_modules.scss */
+/* line 383, ../components/sass/_modules.scss */
 footer {
   height: 60px;
   line-height: 60px;

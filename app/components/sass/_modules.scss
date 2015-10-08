@@ -280,9 +280,10 @@ form {
 	margin-top: 80px;
 	margin-bottom: 100px;
 	background: $white;
+	min-height: 300px;
 }//process-results-container
 
-.result-download-contents {
+.result-download-container {
 	color: $black;
 	box-shadow: 0 2px 5px rgba($black, .5);
 

@@ -56,10 +56,52 @@ module.exports = function(grunt) {
 			app: {
 				src: ['<%= config.app %>/index.html'],
 			}//app
-		}//wiredep
+		},//wiredep
+
+		php: {
+			dist: {
+				options: {
+					base: 'app',
+					port: 8000,
+					open: true
+				}//options
+			}//dist
+		},//php
+
+		clean: {
+			dist: {
+				files: [{
+					dot: true,
+					src: [
+						'.tmp',
+						'<%= config.dist %>/*',
+            '!<%= config.dist %>/.git*'
+					]//src
+				}]//files
+			},//dist
+			server: '.tmp'
+		},//clean
+
+		useminPrepare: {
+			options: {
+				dest: '<%= config.dist %>'
+			},
+			html: '<%= config.app %>/index.html'
+		},//userminPrepare
 
 	}); // initConfig
-}
+
+	grunt.registerTask('serve', 'Compile then start connect a web server', function(target) {
+		if (target == 'dist') {
+			return grunt.task.run(['build', 'connect:dist:keepalive']);
+		}
+
+		grunt.task.run([
+			'php',
+			'watch'
+		]);
+	});
+}//exports
 
 
 

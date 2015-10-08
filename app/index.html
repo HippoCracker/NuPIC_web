@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="neuApp">
 <head>
 	<meta charset="UTF-8">
 	<title>NEU Smart Engine | Sentence context detection</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body ng-controller="MainCtrl">
 	<header class="nav-bar">
 		<div class="wrap">
 			<section class="menu-btn">
@@ -61,9 +61,13 @@
 				</section><!-- form-contents -->
 				<section id="upload-submenu" class="dropdown-menu upload-menu hide">
 					<div class="menu-options">
-						<label for="file-upload" class="file-upload-btn"><i class="fa fa-upload"></i> Upload File</label>
+						<label for="file-upload" class="file-upload-btn" ngf-select="upload($file)">
+							<i class="fa fa-upload"></i> Upload File
+						</label>
 						<input type="file" id ="file-upload" name="#">
-						<label for="folder-upload" class="folder-upload-btn"><i class="fa fa-folder"></i> Upload Folder</label>
+						<label for="folder-upload" class="folder-upload-btn" ngf-select="uploadFiles($files)" multiple="multiple">
+							<i class="fa fa-folder"></i> Upload Folder
+						</label>
 						<input type="file" id ="folder-upload" name="#">
 					</div><!-- menu-options -->
 				</section><!-- dropdown-menu -->
@@ -75,12 +79,12 @@
 				<header class="results-nav">
 					<nav>
 						<ul class="nav-options">
-							<li><a href="#" class="left-label">Result</a></li>
-							<li><a href="#" class="active right-label">Download</a></li>
+							<li><a id="result-label" href="#" class="left-label active">Result</a></li>
+							<li><a id="download-label" href="#" class="right-label">Download</a></li>
 						</ul>
 					</nav>
 				</header><!-- results-nav -->
-				<div class="result-download-contents">
+				<div class="result-download-container">
 					<section class="process-results">
 						<p>
 						<span>Nihil minima tenetur voluptates repudiandae earum quam vel, sequi eveniet velit non perferendis, odio voluptate amet consequuntur voluptas voluptatum temporibus debitis, quia ea! Vel beatae distinctio sunt architecto earum perspiciatis.</span>
@@ -88,13 +92,13 @@
 						<span>Illo cupiditate fugit, rem similique eum sapiente. Facere, nesciunt magni adipisci consequatur ab commodi repudiandae distinctio, eos perferendis nostrum vel earum omnis quod error aliquid. Aut accusantium eligendi qui asperiores.</span>
 						</p>
 					</section><!-- process-results -->
-					<section class="download-options-container">
+					<section class="download-options-container hide">
 						<ul class="download-options">
 							<li><a href="#" class="download-btn">pdf</a></li>
 							<li><a href="#" class="download-btn">txt</a></li>
 							<li><a href="#" class="download-btn">csv</a></li>
 						</ul>
-					</section><!-- download-options -->
+					</section><!-- download-options-container -->
 				</div><!-- result-download-contents -->
 			</section><!-- process-results-container -->
 		</div><!-- wrap -->
@@ -109,12 +113,15 @@
 
 	<!-- bower:js -->
 	<script src="../bower_components/jquery/dist/jquery.js"></script>
+	<script src="../bower_components/angular/angular.js"></script>
+	<script src="../bower_components/ng-file-upload/ng-file-upload.js"></script>
 	<!-- endbower -->
 	<!-- live reload -->
 	<script src="http://localhost:35729/livereload.js"></script>
 
 
 	<script src="components/js/dom.js"></script>
-
+	<script src="components/js/controller.js"></script>
+	
 </body>
 </html>
