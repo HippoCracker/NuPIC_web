@@ -22,7 +22,7 @@ module.exports = function(grunt) {
 		},//compass
 
 		uglify: {
-			my_target: {
+			app: {
 				files: {
 					'<%= config.app %>/js/main.js': [
 												'<%= config.app %>/components/js/main.js',
@@ -30,7 +30,13 @@ module.exports = function(grunt) {
 												'<%= config.app %>/components/js/dom.js'
 												]
 				}
-			}
+			},//app
+			dist: {
+				files: {
+					'<%= config.dist %>/scripts/scripts.js':
+						'<%= config.app %>/js/main.js'
+				}
+			}//dist
 		},//uglify
 
 		watch: {
@@ -41,7 +47,7 @@ module.exports = function(grunt) {
 								'<%= config.app %>/components/js/controller.js',
 								'<%= config.app %>/components/js/dom.js'
 							 ],
-				tasks: ['uglify']
+				tasks: ['uglify:app']
 			}, //scripts
 			sass: {
 				files: ['<%= config.app %>/components/sass/*.scss'],
@@ -89,6 +95,17 @@ module.exports = function(grunt) {
 			html: '<%= config.app %>/index.html'
 		},//userminPrepare
 
+		cssmin: {
+			dist: {
+				files: {
+					'<%= config.dist %>/styles/main.css': [
+						'<%= config.app %>/css/style.css'
+					]
+				}//files
+			}//dist
+		},//cssmin
+
+
 	}); // initConfig
 
 	grunt.registerTask('serve', 'Compile then start connect a web server', function(target) {
@@ -101,6 +118,20 @@ module.exports = function(grunt) {
 			'watch'
 		]);
 	});
+
+	grunt.registerTask('build', [
+		'clean:dist',
+		'wiredep',
+		'useminPrepare',
+		'cssmin',
+		'uglify',
+		'copy:dist',
+		'modernizr',
+		'filerev',
+		'usemin',
+		'htmlmin'
+	]);
+
 }//exports
 
 
