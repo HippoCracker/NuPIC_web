@@ -25,10 +25,9 @@ module.exports = function(grunt) {
 			app: {
 				files: {
 					'<%= config.app %>/js/main.js': [
-												'<%= config.app %>/js/bower.min.js',
 												'<%= config.app %>/components/js/main.js',
 												'<%= config.app %>/components/js/controller.js',
-												'<%= config.app %>/components/js/dom.js',
+												'<%= config.app %>/components/js/dom.js'
 												]
 				}
 			},//app
@@ -37,16 +36,7 @@ module.exports = function(grunt) {
 					'<%= config.dist %>/scripts/scripts.js':
 						'<%= config.app %>/js/main.js'
 				}
-			},//dist
-			bower: {
-				options: {
-					mangle: true,
-					compress: true
-				},//options
-				files: {
-					'<%= config.app %>/js/bower.min.js':'<%= config.app %>/js/bower.js'
-				},//files
-			},//bower
+			}//dist
 		},//uglify
 
 		watch: {
@@ -109,7 +99,7 @@ module.exports = function(grunt) {
 			dist: {
 				files: {
 					'<%= config.dist %>/styles/main.css': [
-						'<%= config.app %>/styles/style.css'
+						'<%= config.app %>/css/style.css'
 					]
 				}//files
 			}//dist
@@ -127,23 +117,32 @@ module.exports = function(grunt) {
 			}//dist
 		},//copy
 
-		bower_concat: {
-			all: {
-				dest: '<%= config.app %>/js/bower.js'
-			}//all
-    },//bower_concat
+		concat: {
+      dist: {}
+    },
 
-    htmlmin: {
-    	dist: {
-    		options: {
-    			removeComments: true,
-    			collapseWhiteSpace: true
-    		},
-    		files: {
-    			'<%= config.dist %>/index.html':'<%= config.app %>/index.html'
-    		}
-    	},//dist
-    },//htmlmin
+    filerev: {
+      dist: {
+        src: [
+          '<%= config.dist %>/scripts/{,*/}*.js',
+          '<%= config.dist %>/styles/{,*/}*.css',
+          '<%= config.dist %>/images/{,*/}*.*',
+          '<%= config.dist %>/styles/fonts/{,*/}*.*',
+          '<%= config.dist %>/*.{ico,png}'
+        ]
+      }
+    },
+    usemin: {
+      options: {
+        assetsDirs: [
+          '<%= config.dist %>',
+          '<%= config.dist %>/images',
+          '<%= config.dist %>/styles'
+        ]
+      },
+      html: ['<%= config.dist %>/{,*/}*.html'],
+      css: ['<%= config.dist %>/styles/{,*/}*.css']
+    },
 
 	}); // initConfig
 
@@ -160,10 +159,14 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('build', [
 		'clean:dist',
+		'wiredep',
 		'useminPrepare',
 		'cssmin',
-		'uglify:dist',
+		'uglify',
 		'copy:dist',
+		'modernizr',
+		'filerev',
+		'usemin',
 		'htmlmin'
 	]);
 
