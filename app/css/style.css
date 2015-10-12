@@ -255,7 +255,7 @@ large
 
   /* line 142, ../components/sass/_layout.scss */
   .process-results {
-    padding: 50px 100px;
+    padding: 80px 100px;
     line-height: 30px;
   }
 
@@ -494,20 +494,24 @@ form {
   border-right: 1px solid #0084B4;
   box-shadow: 2px 0 6px rgba(41, 47, 51, 0.4) inset, -1px 0 1px rgba(41, 47, 51, 0.3);
 }
+/* line 183, ../components/sass/_modules.scss */
+.submit-btn:hover {
+  cursor: pointer;
+}
 
-/* line 184, ../components/sass/_modules.scss */
+/* line 188, ../components/sass/_modules.scss */
 .drop-down-btn {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   box-shadow: -2px 0 6px rgba(41, 47, 51, 0.4) inset, 1px 0 1px rgba(41, 47, 51, 0.3);
 }
 
-/* line 190, ../components/sass/_modules.scss */
+/* line 194, ../components/sass/_modules.scss */
 #file-upload, #folder-upload {
   display: none;
 }
 
-/* line 196, ../components/sass/_modules.scss */
+/* line 200, ../components/sass/_modules.scss */
 .dropdown-menu {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -517,19 +521,19 @@ form {
   box-shadow: 0 0 2px rgba(41, 47, 51, 0.4);
 }
 
-/* line 203, ../components/sass/_modules.scss */
+/* line 207, ../components/sass/_modules.scss */
 .menu-options {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
   width: 200px;
 }
-/* line 207, ../components/sass/_modules.scss */
+/* line 211, ../components/sass/_modules.scss */
 .menu-options li {
   width: 100%;
 }
-/* line 211, ../components/sass/_modules.scss */
-.menu-options label, .menu-options a {
+/* line 215, ../components/sass/_modules.scss */
+.menu-options .file-upload-btn, .menu-options a {
   display: block;
   width: 100%;
   height: 60px;
@@ -539,84 +543,92 @@ form {
   line-height: 40px;
   text-decoration: none;
 }
-/* line 220, ../components/sass/_modules.scss */
-.menu-options label:hover, .menu-options a:hover {
+/* line 224, ../components/sass/_modules.scss */
+.menu-options .file-upload-btn:hover, .menu-options a:hover {
   cursor: pointer;
   background: #55ACEE;
   color: #ffffff;
 }
-/* line 228, ../components/sass/_modules.scss */
-.menu-options label:first-of-type {
+/* line 232, ../components/sass/_modules.scss */
+.menu-options .file-upload-btn:first-of-type {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
-/* line 233, ../components/sass/_modules.scss */
-.menu-options label:last-of-type {
+/* line 237, ../components/sass/_modules.scss */
+.menu-options .file-upload-btn:last-of-type {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
-/* line 241, ../components/sass/_modules.scss */
+/* line 245, ../components/sass/_modules.scss */
 .menu-options li:first-of-type a {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
-/* line 248, ../components/sass/_modules.scss */
+/* line 252, ../components/sass/_modules.scss */
 .menu-options li:last-of-type a {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
 
-/* line 257, ../components/sass/_modules.scss */
+/* line 261, ../components/sass/_modules.scss */
 .upload-menu {
   right: 5px;
   bottom: -124px;
 }
 
-/* line 262, ../components/sass/_modules.scss */
+/* line 266, ../components/sass/_modules.scss */
 .main-menu {
   top: 68px;
 }
 
-/* line 266, ../components/sass/_modules.scss */
+/* line 270, ../components/sass/_modules.scss */
 .notification-menu {
   top: 68px;
   right: 50px;
 }
 
-/* line 271, ../components/sass/_modules.scss */
+/* line 275, ../components/sass/_modules.scss */
 .settings-menu {
   top: 68px;
   right: 10px;
 }
 
-/* line 279, ../components/sass/_modules.scss */
+/* line 283, ../components/sass/_modules.scss */
 .process-results-container {
+  display: none;
   margin-top: 80px;
   margin-bottom: 100px;
   background: #ffffff;
   min-height: 300px;
 }
 
-/* line 286, ../components/sass/_modules.scss */
+/* line 291, ../components/sass/_modules.scss */
 .result-download-container {
   color: #292f33;
   box-shadow: 0 2px 5px rgba(41, 47, 51, 0.5);
 }
 
-/* line 293, ../components/sass/_modules.scss */
+/* line 297, ../components/sass/_modules.scss */
+.process-results {
+  min-height: 300px;
+  line-height: 50px;
+  font-size: 1.1rem;
+}
+
+/* line 304, ../components/sass/_modules.scss */
 .results-nav {
   height: 60px;
   background: #f5f5f5;
 }
 
-/* line 298, ../components/sass/_modules.scss */
+/* line 309, ../components/sass/_modules.scss */
 .results-nav nav {
   height: inherit;
   float: none;
   margin-left: 50px;
 }
 
-/* line 304, ../components/sass/_modules.scss */
+/* line 315, ../components/sass/_modules.scss */
 .nav-options {
   max-width: 280px;
   height: inherit;
@@ -628,13 +640,13 @@ form {
   display: block;
   clear: both;
 }
-/* line 310, ../components/sass/_modules.scss */
+/* line 321, ../components/sass/_modules.scss */
 .nav-options li {
   width: 140px;
   height: inherit;
   float: left;
 }
-/* line 316, ../components/sass/_modules.scss */
+/* line 327, ../components/sass/_modules.scss */
 .nav-options a {
   width: 100%;
   height: 100%;
@@ -648,25 +660,25 @@ form {
   text-align: center;
   z-index: -1;
 }
-/* line 329, ../components/sass/_modules.scss */
+/* line 340, ../components/sass/_modules.scss */
 .nav-options a:hover {
   background: #f5f5f5;
 }
-/* line 334, ../components/sass/_modules.scss */
+/* line 345, ../components/sass/_modules.scss */
 .nav-options a.left-label {
   box-shadow: -3px -3px 3px rgba(41, 47, 51, 0.1) inset;
 }
-/* line 338, ../components/sass/_modules.scss */
+/* line 349, ../components/sass/_modules.scss */
 .nav-options a.right-label {
   box-shadow: 3px -3px 3px rgba(41, 47, 51, 0.1) inset;
 }
-/* line 342, ../components/sass/_modules.scss */
+/* line 353, ../components/sass/_modules.scss */
 .nav-options a.active {
   background: #ffffff;
   box-shadow: none;
 }
 
-/* line 348, ../components/sass/_modules.scss */
+/* line 359, ../components/sass/_modules.scss */
 .download-options {
   margin-right: auto;
   margin-left: auto;
@@ -677,14 +689,14 @@ form {
   display: block;
   clear: both;
 }
-/* line 353, ../components/sass/_modules.scss */
+/* line 364, ../components/sass/_modules.scss */
 .download-options li {
   display: inline-block;
   height: 80px;
   line-height: 80px;
   padding-left: 30px;
 }
-/* line 360, ../components/sass/_modules.scss */
+/* line 371, ../components/sass/_modules.scss */
 .download-options .download-btn {
   display: inline-block;
   background: #55ACEE;
@@ -698,17 +710,379 @@ form {
   border-radius: 5px;
   box-shadow: 0 0 8px rgba(41, 47, 51, 0.4) inset, 0 0 6px rgba(41, 47, 51, 0.3);
 }
-/* line 373, ../components/sass/_modules.scss */
+/* line 384, ../components/sass/_modules.scss */
 .download-options .download-btn:hover {
   background: #1689e0;
 }
 
-/* line 383, ../components/sass/_modules.scss */
+/* line 392, ../components/sass/_modules.scss */
+.notation {
+  position: absolute;
+  top: -12px;
+  display: block;
+  height: 26px;
+  line-height: 22px;
+  padding: 3px;
+  color: #ffffff;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+/* line 404, ../components/sass/_modules.scss */
+.word {
+  position: relative;
+  display: inline-block;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+/* line 411, ../components/sass/_modules.scss */
+.noun {
+  background: #55ACEE;
+}
+
+/* line 415, ../components/sass/_modules.scss */
+.verb {
+  background: #D76666;
+}
+
+/* line 420, ../components/sass/_modules.scss */
 footer {
-  height: 60px;
-  line-height: 60px;
+  position: fixed;
+  bottom: 0;
+  height: 40px;
+  line-height: 40px;
+  width: 100%;
   color: #d9d9d9;
-  font-size: 1.1rem;
+  font-size: 1rem;
   background: #343c41;
-  box-shadow: 0 0 6px rgba(41, 47, 51, 0.4);
+  box-shadow: 0 0 6px rgba(41, 47, 51, 0.6);
+}
+
+/* line 438, ../components/sass/_modules.scss */
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 445, ../components/sass/_modules.scss */
+.loading-effect-container {
+  display: none;
+  margin-top: 40px;
+  text-align: center;
+}
+
+/* line 451, ../components/sass/_modules.scss */
+.loading-effect {
+  display: inline-block;
+}
+
+/* line 455, ../components/sass/_modules.scss */
+.dots {
+  display: inline-block;
+  position: relative;
+}
+/* line 459, ../components/sass/_modules.scss */
+.dots:not(:last-child) {
+  margin-right: 4.5px;
+}
+/* line 463, ../components/sass/_modules.scss */
+.dots:before, .dots:after {
+  content: "";
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  position: absolute;
+}
+/* line 475, ../components/sass/_modules.scss */
+.dots:nth-child(1):before {
+  -webkit-transform: translateY(-200%);
+  transform: translateY(-200%);
+  -webkit-animation: animBefore 1s linear infinite;
+  animation: animBefore 1s linear infinite;
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+  background-color: #F00;
+}
+/* line 488, ../components/sass/_modules.scss */
+.dots:nth-child(1):after {
+  -webkit-transform: translateY(200%);
+  transform: translateY(200%);
+  -webkit-animation: animAfter 1s linear infinite;
+  animation: animAfter 1s linear infinite;
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+  background-color: #777;
+}
+/* line 475, ../components/sass/_modules.scss */
+.dots:nth-child(2):before {
+  -webkit-transform: translateY(-200%);
+  transform: translateY(-200%);
+  -webkit-animation: animBefore 1s linear infinite;
+  animation: animBefore 1s linear infinite;
+  -webkit-animation-delay: -1.8s;
+  animation-delay: -1.8s;
+  background-color: #F00;
+}
+/* line 488, ../components/sass/_modules.scss */
+.dots:nth-child(2):after {
+  -webkit-transform: translateY(200%);
+  transform: translateY(200%);
+  -webkit-animation: animAfter 1s linear infinite;
+  animation: animAfter 1s linear infinite;
+  -webkit-animation-delay: -1.8s;
+  animation-delay: -1.8s;
+  background-color: #777;
+}
+/* line 475, ../components/sass/_modules.scss */
+.dots:nth-child(3):before {
+  -webkit-transform: translateY(-200%);
+  transform: translateY(-200%);
+  -webkit-animation: animBefore 1s linear infinite;
+  animation: animBefore 1s linear infinite;
+  -webkit-animation-delay: -2.7s;
+  animation-delay: -2.7s;
+  background-color: #F00;
+}
+/* line 488, ../components/sass/_modules.scss */
+.dots:nth-child(3):after {
+  -webkit-transform: translateY(200%);
+  transform: translateY(200%);
+  -webkit-animation: animAfter 1s linear infinite;
+  animation: animAfter 1s linear infinite;
+  -webkit-animation-delay: -2.7s;
+  animation-delay: -2.7s;
+  background-color: #777;
+}
+/* line 475, ../components/sass/_modules.scss */
+.dots:nth-child(4):before {
+  -webkit-transform: translateY(-200%);
+  transform: translateY(-200%);
+  -webkit-animation: animBefore 1s linear infinite;
+  animation: animBefore 1s linear infinite;
+  -webkit-animation-delay: -3.6s;
+  animation-delay: -3.6s;
+  background-color: #F00;
+}
+/* line 488, ../components/sass/_modules.scss */
+.dots:nth-child(4):after {
+  -webkit-transform: translateY(200%);
+  transform: translateY(200%);
+  -webkit-animation: animAfter 1s linear infinite;
+  animation: animAfter 1s linear infinite;
+  -webkit-animation-delay: -3.6s;
+  animation-delay: -3.6s;
+  background-color: #777;
+}
+/* line 475, ../components/sass/_modules.scss */
+.dots:nth-child(5):before {
+  -webkit-transform: translateY(-200%);
+  transform: translateY(-200%);
+  -webkit-animation: animBefore 1s linear infinite;
+  animation: animBefore 1s linear infinite;
+  -webkit-animation-delay: -4.5s;
+  animation-delay: -4.5s;
+  background-color: #F00;
+}
+/* line 488, ../components/sass/_modules.scss */
+.dots:nth-child(5):after {
+  -webkit-transform: translateY(200%);
+  transform: translateY(200%);
+  -webkit-animation: animAfter 1s linear infinite;
+  animation: animAfter 1s linear infinite;
+  -webkit-animation-delay: -4.5s;
+  animation-delay: -4.5s;
+  background-color: #777;
+}
+/* line 475, ../components/sass/_modules.scss */
+.dots:nth-child(6):before {
+  -webkit-transform: translateY(-200%);
+  transform: translateY(-200%);
+  -webkit-animation: animBefore 1s linear infinite;
+  animation: animBefore 1s linear infinite;
+  -webkit-animation-delay: -5.4s;
+  animation-delay: -5.4s;
+  background-color: #F00;
+}
+/* line 488, ../components/sass/_modules.scss */
+.dots:nth-child(6):after {
+  -webkit-transform: translateY(200%);
+  transform: translateY(200%);
+  -webkit-animation: animAfter 1s linear infinite;
+  animation: animAfter 1s linear infinite;
+  -webkit-animation-delay: -5.4s;
+  animation-delay: -5.4s;
+  background-color: #777;
+}
+/* line 475, ../components/sass/_modules.scss */
+.dots:nth-child(7):before {
+  -webkit-transform: translateY(-200%);
+  transform: translateY(-200%);
+  -webkit-animation: animBefore 1s linear infinite;
+  animation: animBefore 1s linear infinite;
+  -webkit-animation-delay: -6.3s;
+  animation-delay: -6.3s;
+  background-color: #F00;
+}
+/* line 488, ../components/sass/_modules.scss */
+.dots:nth-child(7):after {
+  -webkit-transform: translateY(200%);
+  transform: translateY(200%);
+  -webkit-animation: animAfter 1s linear infinite;
+  animation: animAfter 1s linear infinite;
+  -webkit-animation-delay: -6.3s;
+  animation-delay: -6.3s;
+  background-color: #777;
+}
+/* line 475, ../components/sass/_modules.scss */
+.dots:nth-child(8):before {
+  -webkit-transform: translateY(-200%);
+  transform: translateY(-200%);
+  -webkit-animation: animBefore 1s linear infinite;
+  animation: animBefore 1s linear infinite;
+  -webkit-animation-delay: -7.2s;
+  animation-delay: -7.2s;
+  background-color: #F00;
+}
+/* line 488, ../components/sass/_modules.scss */
+.dots:nth-child(8):after {
+  -webkit-transform: translateY(200%);
+  transform: translateY(200%);
+  -webkit-animation: animAfter 1s linear infinite;
+  animation: animAfter 1s linear infinite;
+  -webkit-animation-delay: -7.2s;
+  animation-delay: -7.2s;
+  background-color: #777;
+}
+/* line 475, ../components/sass/_modules.scss */
+.dots:nth-child(9):before {
+  -webkit-transform: translateY(-200%);
+  transform: translateY(-200%);
+  -webkit-animation: animBefore 1s linear infinite;
+  animation: animBefore 1s linear infinite;
+  -webkit-animation-delay: -8.1s;
+  animation-delay: -8.1s;
+  background-color: #F00;
+}
+/* line 488, ../components/sass/_modules.scss */
+.dots:nth-child(9):after {
+  -webkit-transform: translateY(200%);
+  transform: translateY(200%);
+  -webkit-animation: animAfter 1s linear infinite;
+  animation: animAfter 1s linear infinite;
+  -webkit-animation-delay: -8.1s;
+  animation-delay: -8.1s;
+  background-color: #777;
+}
+/* line 475, ../components/sass/_modules.scss */
+.dots:nth-child(10):before {
+  -webkit-transform: translateY(-200%);
+  transform: translateY(-200%);
+  -webkit-animation: animBefore 1s linear infinite;
+  animation: animBefore 1s linear infinite;
+  -webkit-animation-delay: -9s;
+  animation-delay: -9s;
+  background-color: #F00;
+}
+/* line 488, ../components/sass/_modules.scss */
+.dots:nth-child(10):after {
+  -webkit-transform: translateY(200%);
+  transform: translateY(200%);
+  -webkit-animation: animAfter 1s linear infinite;
+  animation: animAfter 1s linear infinite;
+  -webkit-animation-delay: -9s;
+  animation-delay: -9s;
+  background-color: #777;
+}
+
+@-webkit-keyframes animBefore {
+  0% {
+    -webkit-transform: scale(1) translateY(-200%);
+    z-index: 1;
+  }
+  25% {
+    -webkit-transform: scale(1.3) translateY(0);
+    z-index: 1;
+  }
+  50% {
+    -webkit-transform: scale(1) translateY(200%);
+    z-index: -1;
+  }
+  75% {
+    -webkit-transform: scale(0.7) translateY(0);
+    z-index: -1;
+  }
+  100% {
+    -webkit-transform: scale(1) translateY(-200%);
+    z-index: -1;
+  }
+}
+@keyframes animBefore {
+  0% {
+    transform: scale(1) translateY(-200%);
+    z-index: 1;
+  }
+  25% {
+    transform: scale(1.3) translateY(0);
+    z-index: 1;
+  }
+  50% {
+    transform: scale(1) translateY(200%);
+    z-index: -1;
+  }
+  75% {
+    transform: scale(0.7) translateY(0);
+    z-index: -1;
+  }
+  100% {
+    transform: scale(1) translateY(-200%);
+    z-index: -1;
+  }
+}
+@-webkit-keyframes animAfter {
+  0% {
+    -webkit-transform: scale(1) translateY(200%);
+    z-index: -1;
+  }
+  25% {
+    -webkit-transform: scale(0.7) translateY(0);
+    z-index: -1;
+  }
+  50% {
+    -webkit-transform: scale(1) translateY(-200%);
+    z-index: 1;
+  }
+  75% {
+    -webkit-transform: scale(1.3) translateY(0);
+    z-index: 1;
+  }
+  100% {
+    -webkit-transform: scale(1) translateY(200%);
+    z-index: 1;
+  }
+}
+@keyframes animAfter {
+  0% {
+    transform: scale(1) translateY(200%);
+    z-index: -1;
+  }
+  25% {
+    transform: scale(0.7) translateY(0);
+    z-index: -1;
+  }
+  50% {
+    transform: scale(1) translateY(-200%);
+    z-index: 1;
+  }
+  75% {
+    transform: scale(1.3) translateY(0);
+    z-index: 1;
+  }
+  100% {
+    transform: scale(1) translateY(200%);
+    z-index: 1;
+  }
 }

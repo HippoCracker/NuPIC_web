@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>NEU Smart Engine | Sentence context detection</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<link rel="stylesheet" href="styles/style.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body ng-controller="MainCtrl">
 	<header class="nav-bar">
@@ -53,27 +53,42 @@
 		<section class="form-container">
 			<form>
 				<section class="form-contents">
-					<textarea class="input-text" placeholder="Try some sentences... :-)"></textarea>
+					<textarea class="input-text" ng-model="sentence" placeholder="Try some sentences... :-)"></textarea>
 					<section class="btn-group">
-						<a href="#" id="submit-btn" class="submit-btn btn">Submit</a>
+						<div id="submit-btn" ng-click="upload($sentence)" class="submit-btn btn">Submit</div>
 						<a href="#" id="submit-dropdown-btn" class="drop-down-btn btn"><i class="fa fa-caret-square-o-down"></i></a>
 					</section><!-- btn-group -->
 				</section><!-- form-contents -->
 				<section id="upload-submenu" class="dropdown-menu upload-menu hide">
 					<div class="menu-options">
-						<label for="file-upload" class="file-upload-btn" ngf-select="upload($file)">
+						<div class="file-upload-btn" ng-model="file" ngf-select="uploadFile($file)">
 							<i class="fa fa-upload"></i> Upload File
-						</label>
-						<input type="file" id ="file-upload" name="#">
-						<label for="folder-upload" class="folder-upload-btn" ngf-select="uploadFiles($files)" multiple="multiple">
-							<i class="fa fa-folder"></i> Upload Folder
-						</label>
-						<input type="file" id ="folder-upload" name="#">
+						</div>
+						<!-- <input type="file" id ="file-upload" name="#"> -->
+						<div class="file-upload-btn" ng-model="files" ngf-select="uploadFiles($files)" multiple>
+							<i class="fa fa-folder"></i> Multiple Files
+						</div>
+						<!-- <input type="file" id ="folder-upload" name="#"> -->
 					</div><!-- menu-options -->
 				</section><!-- dropdown-menu -->
 			</form>
 		</section><!-- form-contents -->
-		
+
+		<div class="loading-effect-container">
+			<div class="loading-effect">
+			  <span class="dots"></span>
+			  <span class="dots"></span>
+			  <span class="dots"></span>
+			  <span class="dots"></span>
+			  <span class="dots"></span>
+			  <span class="dots"></span>
+			  <span class="dots"></span>
+			  <span class="dots"></span>
+			  <span class="dots"></span>
+			  <span class="dots"></span>
+			</div>
+		</div>
+
 		<div class="wrap">
 			<section class="process-results-container">
 				<header class="results-nav">
@@ -87,9 +102,10 @@
 				<div class="result-download-container">
 					<section class="process-results">
 						<p>
-						<span>Nihil minima tenetur voluptates repudiandae earum quam vel, sequi eveniet velit non perferendis, odio voluptate amet consequuntur voluptas voluptatum temporibus debitis, quia ea! Vel beatae distinctio sunt architecto earum perspiciatis.</span>
-						<span>Consequuntur impedit et ea aut optio pariatur architecto ipsum natus. Dolorem, magni, ullam. Libero officia praesentium, magnam odio voluptates iste eius nulla laudantium commodi nemo laboriosam, perferendis ullam nihil nisi?</span>
-						<span>Illo cupiditate fugit, rem similique eum sapiente. Facere, nesciunt magni adipisci consequatur ab commodi repudiandae distinctio, eos perferendis nostrum vel earum omnis quod error aliquid. Aut accusantium eligendi qui asperiores.</span>
+							<span class="word"> Nihil <span class="notation noun">NN</span> </span><span class="word"> minima <span class="notation verb">VB</span></span> tenetur voluptates repudiandae earum quam vel
+						</p>
+						<p>
+							sequi eveniet velit non perferendis, odio voluptate amet consequuntur voluptas voluptatum temporibus debitis, quia ea! Vel beatae distinctio sunt architecto earum perspiciatis.
 						</p>
 					</section><!-- process-results -->
 					<section class="download-options-container hide">

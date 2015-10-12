@@ -1,7 +1,5 @@
 $(document).ready(function() {
 
-	
-
 	$(".dropdown-menu a, .dropdown-menu label").click(function(event) {
 		$(".dropdown-menu").fadeOut(100);
 	});

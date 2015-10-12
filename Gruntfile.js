@@ -34,7 +34,7 @@ module.exports = function(grunt) {
 			},//app
 			dist: {
 				files: {
-					'<%= config.dist %>/scripts/scripts.js':
+					'<%= config.dist %>/js/main.js':
 						'<%= config.app %>/js/main.js'
 				}
 			},//dist
@@ -108,8 +108,8 @@ module.exports = function(grunt) {
 		cssmin: {
 			dist: {
 				files: {
-					'<%= config.dist %>/styles/main.css': [
-						'<%= config.app %>/styles/style.css'
+					'<%= config.dist %>/css/style.css': [
+						'<%= config.app %>/css/style.css'
 					]
 				}//files
 			}//dist
