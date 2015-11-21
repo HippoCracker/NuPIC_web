@@ -4,7 +4,6 @@ neuApp.controller('MainCtrl',
 		['$scope', 'Upload', '$timeout',function($scope, Upload, $timeout) {
 
 	$scope.upload = function(sentence) {
-		alert(sentence);
 		$(".loading-effect-container").fadeIn(500);
 		Upload.upload({
 			url: 'php/sentenceupload',
@@ -20,7 +19,7 @@ neuApp.controller('MainCtrl',
 		$(".loading-effect-container").fadeIn(500);
 		$("#upload-submenu").fadeOut(100);
 		Upload.upload({
-			url: 'php/fileupload',
+			url: 'file_upload',
 			method: 'POST',
 			data: { file: file, ip: 'userip'}
 		}).then(function(resp) {
@@ -35,7 +34,7 @@ neuApp.controller('MainCtrl',
 		$scope.files = files;
 		if (files && files.length) {
 			Upload.upload({
-				url: 'php/multi_file_upload',
+				url: 'multi_file_upload',
 				data: {
 					files: files
 				}

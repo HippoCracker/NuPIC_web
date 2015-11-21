@@ -595,40 +595,39 @@ form {
 
 /* line 283, ../components/sass/_modules.scss */
 .process-results-container {
-  display: none;
   margin-top: 80px;
   margin-bottom: 100px;
   background: #ffffff;
   min-height: 300px;
 }
 
-/* line 291, ../components/sass/_modules.scss */
+/* line 290, ../components/sass/_modules.scss */
 .result-download-container {
   color: #292f33;
   box-shadow: 0 2px 5px rgba(41, 47, 51, 0.5);
 }
 
-/* line 297, ../components/sass/_modules.scss */
+/* line 296, ../components/sass/_modules.scss */
 .process-results {
   min-height: 300px;
   line-height: 50px;
   font-size: 1.1rem;
 }
 
-/* line 304, ../components/sass/_modules.scss */
+/* line 303, ../components/sass/_modules.scss */
 .results-nav {
   height: 60px;
   background: #f5f5f5;
 }
 
-/* line 309, ../components/sass/_modules.scss */
+/* line 308, ../components/sass/_modules.scss */
 .results-nav nav {
   height: inherit;
   float: none;
   margin-left: 50px;
 }
 
-/* line 315, ../components/sass/_modules.scss */
+/* line 314, ../components/sass/_modules.scss */
 .nav-options {
   max-width: 280px;
   height: inherit;
@@ -640,13 +639,13 @@ form {
   display: block;
   clear: both;
 }
-/* line 321, ../components/sass/_modules.scss */
+/* line 320, ../components/sass/_modules.scss */
 .nav-options li {
   width: 140px;
   height: inherit;
   float: left;
 }
-/* line 327, ../components/sass/_modules.scss */
+/* line 326, ../components/sass/_modules.scss */
 .nav-options a {
   width: 100%;
   height: 100%;
@@ -660,25 +659,25 @@ form {
   text-align: center;
   z-index: -1;
 }
-/* line 340, ../components/sass/_modules.scss */
+/* line 339, ../components/sass/_modules.scss */
 .nav-options a:hover {
   background: #f5f5f5;
 }
-/* line 345, ../components/sass/_modules.scss */
+/* line 344, ../components/sass/_modules.scss */
 .nav-options a.left-label {
   box-shadow: -3px -3px 3px rgba(41, 47, 51, 0.1) inset;
 }
-/* line 349, ../components/sass/_modules.scss */
+/* line 348, ../components/sass/_modules.scss */
 .nav-options a.right-label {
   box-shadow: 3px -3px 3px rgba(41, 47, 51, 0.1) inset;
 }
-/* line 353, ../components/sass/_modules.scss */
+/* line 352, ../components/sass/_modules.scss */
 .nav-options a.active {
   background: #ffffff;
   box-shadow: none;
 }
 
-/* line 359, ../components/sass/_modules.scss */
+/* line 358, ../components/sass/_modules.scss */
 .download-options {
   margin-right: auto;
   margin-left: auto;
@@ -689,14 +688,14 @@ form {
   display: block;
   clear: both;
 }
-/* line 364, ../components/sass/_modules.scss */
+/* line 363, ../components/sass/_modules.scss */
 .download-options li {
   display: inline-block;
   height: 80px;
   line-height: 80px;
   padding-left: 30px;
 }
-/* line 371, ../components/sass/_modules.scss */
+/* line 370, ../components/sass/_modules.scss */
 .download-options .download-btn {
   display: inline-block;
   background: #55ACEE;
@@ -710,12 +709,12 @@ form {
   border-radius: 5px;
   box-shadow: 0 0 8px rgba(41, 47, 51, 0.4) inset, 0 0 6px rgba(41, 47, 51, 0.3);
 }
-/* line 384, ../components/sass/_modules.scss */
+/* line 383, ../components/sass/_modules.scss */
 .download-options .download-btn:hover {
   background: #1689e0;
 }
 
-/* line 392, ../components/sass/_modules.scss */
+/* line 391, ../components/sass/_modules.scss */
 .notation {
   position: absolute;
   top: -12px;
@@ -728,7 +727,7 @@ form {
   border-radius: 5px;
 }
 
-/* line 404, ../components/sass/_modules.scss */
+/* line 403, ../components/sass/_modules.scss */
 .word {
   position: relative;
   display: inline-block;
@@ -736,17 +735,17 @@ form {
   margin-left: 5px;
 }
 
-/* line 411, ../components/sass/_modules.scss */
+/* line 410, ../components/sass/_modules.scss */
 .noun {
   background: #55ACEE;
 }
 
-/* line 415, ../components/sass/_modules.scss */
+/* line 414, ../components/sass/_modules.scss */
 .verb {
   background: #D76666;
 }
 
-/* line 420, ../components/sass/_modules.scss */
+/* line 419, ../components/sass/_modules.scss */
 footer {
   position: fixed;
   bottom: 0;
@@ -759,7 +758,7 @@ footer {
   box-shadow: 0 0 6px rgba(41, 47, 51, 0.6);
 }
 
-/* line 438, ../components/sass/_modules.scss */
+/* line 437, ../components/sass/_modules.scss */
 *, *:before, *:after {
   margin: 0;
   padding: 0;
@@ -767,28 +766,28 @@ footer {
   box-sizing: border-box;
 }
 
-/* line 445, ../components/sass/_modules.scss */
+/* line 444, ../components/sass/_modules.scss */
 .loading-effect-container {
   display: none;
   margin-top: 40px;
   text-align: center;
 }
 
-/* line 451, ../components/sass/_modules.scss */
+/* line 450, ../components/sass/_modules.scss */
 .loading-effect {
   display: inline-block;
 }
 
-/* line 455, ../components/sass/_modules.scss */
+/* line 454, ../components/sass/_modules.scss */
 .dots {
   display: inline-block;
   position: relative;
 }
-/* line 459, ../components/sass/_modules.scss */
+/* line 458, ../components/sass/_modules.scss */
 .dots:not(:last-child) {
   margin-right: 4.5px;
 }
-/* line 463, ../components/sass/_modules.scss */
+/* line 462, ../components/sass/_modules.scss */
 .dots:before, .dots:after {
   content: "";
   display: inline-block;
@@ -797,7 +796,7 @@ footer {
   border-radius: 50%;
   position: absolute;
 }
-/* line 475, ../components/sass/_modules.scss */
+/* line 474, ../components/sass/_modules.scss */
 .dots:nth-child(1):before {
   -webkit-transform: translateY(-200%);
   transform: translateY(-200%);
@@ -807,7 +806,7 @@ footer {
   animation-delay: -0.9s;
   background-color: #F00;
 }
-/* line 488, ../components/sass/_modules.scss */
+/* line 487, ../components/sass/_modules.scss */
 .dots:nth-child(1):after {
   -webkit-transform: translateY(200%);
   transform: translateY(200%);
@@ -817,7 +816,7 @@ footer {
   animation-delay: -0.9s;
   background-color: #777;
 }
-/* line 475, ../components/sass/_modules.scss */
+/* line 474, ../components/sass/_modules.scss */
 .dots:nth-child(2):before {
   -webkit-transform: translateY(-200%);
   transform: translateY(-200%);
@@ -827,7 +826,7 @@ footer {
   animation-delay: -1.8s;
   background-color: #F00;
 }
-/* line 488, ../components/sass/_modules.scss */
+/* line 487, ../components/sass/_modules.scss */
 .dots:nth-child(2):after {
   -webkit-transform: translateY(200%);
   transform: translateY(200%);
@@ -837,7 +836,7 @@ footer {
   animation-delay: -1.8s;
   background-color: #777;
 }
-/* line 475, ../components/sass/_modules.scss */
+/* line 474, ../components/sass/_modules.scss */
 .dots:nth-child(3):before {
   -webkit-transform: translateY(-200%);
   transform: translateY(-200%);
@@ -847,7 +846,7 @@ footer {
   animation-delay: -2.7s;
   background-color: #F00;
 }
-/* line 488, ../components/sass/_modules.scss */
+/* line 487, ../components/sass/_modules.scss */
 .dots:nth-child(3):after {
   -webkit-transform: translateY(200%);
   transform: translateY(200%);
@@ -857,7 +856,7 @@ footer {
   animation-delay: -2.7s;
   background-color: #777;
 }
-/* line 475, ../components/sass/_modules.scss */
+/* line 474, ../components/sass/_modules.scss */
 .dots:nth-child(4):before {
   -webkit-transform: translateY(-200%);
   transform: translateY(-200%);
@@ -867,7 +866,7 @@ footer {
   animation-delay: -3.6s;
   background-color: #F00;
 }
-/* line 488, ../components/sass/_modules.scss */
+/* line 487, ../components/sass/_modules.scss */
 .dots:nth-child(4):after {
   -webkit-transform: translateY(200%);
   transform: translateY(200%);
@@ -877,7 +876,7 @@ footer {
   animation-delay: -3.6s;
   background-color: #777;
 }
-/* line 475, ../components/sass/_modules.scss */
+/* line 474, ../components/sass/_modules.scss */
 .dots:nth-child(5):before {
   -webkit-transform: translateY(-200%);
   transform: translateY(-200%);
@@ -887,7 +886,7 @@ footer {
   animation-delay: -4.5s;
   background-color: #F00;
 }
-/* line 488, ../components/sass/_modules.scss */
+/* line 487, ../components/sass/_modules.scss */
 .dots:nth-child(5):after {
   -webkit-transform: translateY(200%);
   transform: translateY(200%);
@@ -897,7 +896,7 @@ footer {
   animation-delay: -4.5s;
   background-color: #777;
 }
-/* line 475, ../components/sass/_modules.scss */
+/* line 474, ../components/sass/_modules.scss */
 .dots:nth-child(6):before {
   -webkit-transform: translateY(-200%);
   transform: translateY(-200%);
@@ -907,7 +906,7 @@ footer {
   animation-delay: -5.4s;
   background-color: #F00;
 }
-/* line 488, ../components/sass/_modules.scss */
+/* line 487, ../components/sass/_modules.scss */
 .dots:nth-child(6):after {
   -webkit-transform: translateY(200%);
   transform: translateY(200%);
@@ -917,7 +916,7 @@ footer {
   animation-delay: -5.4s;
   background-color: #777;
 }
-/* line 475, ../components/sass/_modules.scss */
+/* line 474, ../components/sass/_modules.scss */
 .dots:nth-child(7):before {
   -webkit-transform: translateY(-200%);
   transform: translateY(-200%);
@@ -927,7 +926,7 @@ footer {
   animation-delay: -6.3s;
   background-color: #F00;
 }
-/* line 488, ../components/sass/_modules.scss */
+/* line 487, ../components/sass/_modules.scss */
 .dots:nth-child(7):after {
   -webkit-transform: translateY(200%);
   transform: translateY(200%);
@@ -937,7 +936,7 @@ footer {
   animation-delay: -6.3s;
   background-color: #777;
 }
-/* line 475, ../components/sass/_modules.scss */
+/* line 474, ../components/sass/_modules.scss */
 .dots:nth-child(8):before {
   -webkit-transform: translateY(-200%);
   transform: translateY(-200%);
@@ -947,7 +946,7 @@ footer {
   animation-delay: -7.2s;
   background-color: #F00;
 }
-/* line 488, ../components/sass/_modules.scss */
+/* line 487, ../components/sass/_modules.scss */
 .dots:nth-child(8):after {
   -webkit-transform: translateY(200%);
   transform: translateY(200%);
@@ -957,7 +956,7 @@ footer {
   animation-delay: -7.2s;
   background-color: #777;
 }
-/* line 475, ../components/sass/_modules.scss */
+/* line 474, ../components/sass/_modules.scss */
 .dots:nth-child(9):before {
   -webkit-transform: translateY(-200%);
   transform: translateY(-200%);
@@ -967,7 +966,7 @@ footer {
   animation-delay: -8.1s;
   background-color: #F00;
 }
-/* line 488, ../components/sass/_modules.scss */
+/* line 487, ../components/sass/_modules.scss */
 .dots:nth-child(9):after {
   -webkit-transform: translateY(200%);
   transform: translateY(200%);
@@ -977,7 +976,7 @@ footer {
   animation-delay: -8.1s;
   background-color: #777;
 }
-/* line 475, ../components/sass/_modules.scss */
+/* line 474, ../components/sass/_modules.scss */
 .dots:nth-child(10):before {
   -webkit-transform: translateY(-200%);
   transform: translateY(-200%);
@@ -987,7 +986,7 @@ footer {
   animation-delay: -9s;
   background-color: #F00;
 }
-/* line 488, ../components/sass/_modules.scss */
+/* line 487, ../components/sass/_modules.scss */
 .dots:nth-child(10):after {
   -webkit-transform: translateY(200%);
   transform: translateY(200%);

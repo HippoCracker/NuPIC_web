@@ -21,7 +21,6 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "~2.1.4",
     "angular": "~1.4.7",
     "ng-file-upload": "~9.0.7"
   }

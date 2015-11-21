@@ -25,7 +25,6 @@ module.exports = function(grunt) {
 			app: {
 				files: {
 					'<%= config.app %>/js/main.js': [
-												'<%= config.app %>/js/bower.min.js',
 												'<%= config.app %>/components/js/main.js',
 												'<%= config.app %>/components/js/controller.js',
 												'<%= config.app %>/components/js/dom.js',
@@ -34,8 +33,11 @@ module.exports = function(grunt) {
 			},//app
 			dist: {
 				files: {
-					'<%= config.dist %>/js/main.js':
-						'<%= config.app %>/js/main.js'
+					'<%= config.dist %>/js/main.js': [
+						'<%= config.app %>/js/main.js',
+						'<%= config.app %>/../bower_components/angular/angular.js',
+						'<%= config.app %>/../bower_components/ng-file-upload/ng-file-upload.js',
+					]
 				}
 			},//dist
 			bower: {
