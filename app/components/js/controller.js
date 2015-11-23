@@ -2,6 +2,98 @@ var neuApp = angular.module('neuApp', ['ngFileUpload']);
 
 neuApp.controller('MainCtrl',
 		['$scope', 'Upload', '$timeout',function($scope, Upload, $timeout) {
+	var data = {"sentences":[
+			{
+				"status":false,
+			  "words":[
+			 		{"word":"This","tag":"noun"},
+			 		{"word":"is","tag":"verb"},
+			 		{"word":"good","tag":"Adj"}
+			 	]
+			},
+			{
+				"status":true,
+			  "words":[
+			 		{"word":"Another","tag":"noun"},
+			 		{"word":"sentence","tag":"verb"},
+			 		{"word":"here","tag":"Adj"}
+			 	]
+			},
+			{
+				"status":true,
+			  "words":[
+			 		{"word":"Another","tag":"noun"},
+			 		{"word":"sentence","tag":"verb"},
+			 		{"word":"here","tag":"Adj"}
+			 	]
+			},
+			{
+				"status":true,
+			  "words":[
+			 		{"word":"Another","tag":"noun"},
+			 		{"word":"sentence","tag":"verb"},
+			 		{"word":"here","tag":"Adj"}
+			 	]
+			},
+			{
+				"status":true,
+			  "words":[
+			 		{"word":"Another","tag":"noun"},
+			 		{"word":"sentence","tag":"verb"},
+			 		{"word":"here","tag":"Adj"}
+			 	]
+			},
+			{
+				"status":true,
+			  "words":[
+			 		{"word":"Another","tag":"noun"},
+			 		{"word":"sentence","tag":"verb"},
+			 		{"word":"here","tag":"Adj"}
+			 	]
+			},
+			{
+				"status":true,
+			  "words":[
+			 		{"word":"Another","tag":"noun"},
+			 		{"word":"sentence","tag":"verb"},
+			 		{"word":"here","tag":"Adj"}
+			 	]
+			},
+			{
+				"status":true,
+			  "words":[
+			 		{"word":"Another","tag":"noun"},
+			 		{"word":"sentence","tag":"verb"},
+			 		{"word":"here","tag":"Adj"}
+			 	]
+			},
+			{
+				"status":false,
+			  "words":[
+			 		{"word":"Another","tag":"noun"},
+			 		{"word":"sentence","tag":"verb"},
+			 		{"word":"here","tag":"Adj"}
+			 	]
+			},
+			{
+				"status":true,
+			  "words":[
+			 		{"word":"Another","tag":"noun"},
+			 		{"word":"sentence","tag":"verb"},
+			 		{"word":"here","tag":"Adj"}
+			 	]
+			},
+			{
+				"status":true,
+			  "words":[
+			 		{"word":"Another","tag":"noun"},
+			 		{"word":"sentence","tag":"verb"},
+			 		{"word":"here","tag":"Adj"}
+			 	]
+			}
+		]
+	};
+	$scope.sentences = data.sentences;
 
 	$scope.upload = function(sentence) {
 		$(".loading-effect-container").fadeIn(500);
@@ -15,17 +107,24 @@ neuApp.controller('MainCtrl',
 		});
 	};
 
-	$scope.uploadFile = function(file) {
+	$scope.uploadFile = function(file, errFiles) {
 		$(".loading-effect-container").fadeIn(500);
 		$("#upload-submenu").fadeOut(100);
-		Upload.upload({
-			url: 'file_upload',
-			method: 'POST',
-			data: { file: file, ip: 'userip'}
-		}).then(function(resp) {
-			console.log("repsonse is here");
+
+		$scope.file = file;
+		if (file) {
+			file.upload = Upload.upload({
+				url: 'file_upload',
+				method: 'GET',
+				data: { file: file }
+			}).then(function (resp) {
+				var data = resp.data;
+				$scope.sentences = data.sentences;
+			});
+			$scope.$apply();
 			$(".loading-effect-container").fadeOut(500);
-		});
+			$(".process-results-container").fadeIn(200);
+		}
 	};
 
 	$scope.uploadFiles = function(files) {

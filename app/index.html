@@ -46,6 +46,7 @@
 			</nav>
 		</div><!-- wrap -->
 	</header>
+
 	<div class="contents">
 		<section class="banner">
 			<h1><span>NEU</span> Smart Engine</h1>
@@ -61,7 +62,7 @@
 				</section><!-- form-contents -->
 				<section id="upload-submenu" class="dropdown-menu upload-menu hide">
 					<div class="menu-options">
-						<div class="file-upload-btn" ng-model="file" ngf-select="uploadFile($file)">
+						<div class="file-upload-btn" ng-model="file" ngf-select="uploadFile($file, $invalidFiles)">
 							<i class="fa fa-upload"></i> Upload File
 						</div>
 						<!-- <input type="file" id ="file-upload" name="#"> -->
@@ -76,16 +77,16 @@
 
 		<div class="loading-effect-container">
 			<div class="loading-effect">
-			  <span class="dots"></span>
-			  <span class="dots"></span>
-			  <span class="dots"></span>
-			  <span class="dots"></span>
-			  <span class="dots"></span>
-			  <span class="dots"></span>
-			  <span class="dots"></span>
-			  <span class="dots"></span>
-			  <span class="dots"></span>
-			  <span class="dots"></span>
+				<span class="dots"></span>
+				<span class="dots"></span>
+				<span class="dots"></span>
+				<span class="dots"></span>
+				<span class="dots"></span>
+				<span class="dots"></span>
+				<span class="dots"></span>
+				<span class="dots"></span>
+				<span class="dots"></span>
+				<span class="dots"></span>
 			</div>
 		</div>
 
@@ -95,18 +96,29 @@
 					<nav>
 						<ul class="nav-options">
 							<li><a id="result-label" href="#" class="left-label active">Result</a></li>
+							<li><a id="analysis-label" href="#" class="middle-label">Analysis</a></li>
 							<li><a id="download-label" href="#" class="right-label">Download</a></li>
 						</ul>
 					</nav>
 				</header><!-- results-nav -->
-				<div class="result-download-container">
+				<div class="result-container">
 					<section class="process-results">
-						<p>
-							<span class="word"> Nihil <span class="notation noun">NN</span> </span><span class="word"> minima <span class="notation verb">VB</span></span> tenetur voluptates repudiandae earum quam vel
-						</p>
-						<p>
-							sequi eveniet velit non perferendis, odio voluptate amet consequuntur voluptas voluptatum temporibus debitis, quia ea! Vel beatae distinctio sunt architecto earum perspiciatis.
-						</p>
+						<div class="sentence-container" ng-repeat="sentence in sentences">
+							<div class="line" ng-class="sentence.status ? 'normal-line' : 'abnormal-line'">
+								<div class="word-container" ng-repeat="word in sentence.words">
+									<span class="word">
+										{{word.word}}
+										<span class="notation" ng-class="word.tag">{{word.tag}}</span>
+									</span><!-- word -->
+								</div><!-- word-container -->
+								<div class="status-icon normal-icon" ng-if="sentence.status == true">
+									<i class="fa fa-check"></i>          		
+								</div>
+								<div class="status-icon abnormal-icon" ng-if="sentence.status == false">
+									<i class="fa fa-times"></i>
+								</div>
+							</div>
+						</div><!-- sentence-container -->
 					</section><!-- process-results -->
 					<section class="download-options-container hide">
 						<ul class="download-options">
@@ -115,16 +127,42 @@
 							<li><a href="#" class="download-btn">csv</a></li>
 						</ul>
 					</section><!-- download-options-container -->
-				</div><!-- result-download-contents -->
+				</div><!-- result-container -->
 			</section><!-- process-results-container -->
 		</div><!-- wrap -->
 	</div><!-- contents -->
+
+	<div class="side-btn-container left-side">
+		<div class="previous-error-btn side-btn"><i class="fa fa-arrow-up"></i></div>
+		<div class="next-error-btn side-btn"><i class="fa fa-arrow-down"></i></div>
+	</div><!-- side-btn -->
+
+	<div class="side-btn-container right-side">
+		<div class="previous-error-btn side-btn"><i class="fa fa-arrow-up"></i></div>
+	</div><!-- side-btn -->
+
 	<footer>
 		<div class="wrap">
-			<section>
-				<p>College of Engineering | Northeastern University</p>
-			</section>
-		</div>
+			<ul>
+				<li>
+					<a href="http://www.northeastern.edu/graduate/programs/information-systems/#masters" target="_blank">
+						MSIS 
+						<span>|</span>
+					</a>
+				</li>
+				<li>
+					<a href="http://www.coe.neu.edu/" target="_blank">
+						College Of Engineering 
+						<span>|</span>
+					</a>
+				</li>
+				<li>
+					<a href="http://www.northeastern.edu/" target="_blank">
+						Northeastern University 
+					</a>
+				</li>
+			</ul>
+		</div><!-- wrap -->
 	</footer>
 
 	<!-- live reload -->

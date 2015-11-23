@@ -47,14 +47,17 @@ $(document).ready(function() {
 	$("#result-label").click(function(event) {
 		event.preventDefault();
 		$("#download-label").removeClass("active");
+		$("#analysis-label").removeClass("active");
 		$("#result-label").addClass("active");
-		$(".process-results").fadeIn("fast");
+		$(".process-results").fadeIn(200);
+
 		$(".download-options-container").hide();
 	});
 
 	$("#download-label").click(function(event) {
 		event.preventDefault();
 		$("#download-label").addClass("active");
+		$("#analysis-label").removeClass("active");
 		$("#result-label").removeClass("active");
 		$(".process-results").hide();
 		$(".download-options-container").fadeIn("fast");
