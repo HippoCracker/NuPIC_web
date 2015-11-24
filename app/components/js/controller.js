@@ -110,6 +110,7 @@ neuApp.controller('MainCtrl',
 	$scope.uploadFile = function(file, errFiles) {
 		$(".loading-effect-container").fadeIn(500);
 		$("#upload-submenu").fadeOut(100);
+		$(".process-results-container").fadeOut(200);
 
 		$scope.file = file;
 		if (file) {
@@ -125,6 +126,7 @@ neuApp.controller('MainCtrl',
 			$(".loading-effect-container").fadeOut(500);
 			$(".process-results-container").fadeIn(200);
 			$("#nav-btn-container").fadeIn(600);
+			scrollToResult();
 		}
 	};
 
@@ -142,6 +144,12 @@ neuApp.controller('MainCtrl',
 				$(".loading-effect-container").fadeOut(500);
 			});
 		}
+	};
+
+	function scrollToResult() {
+		var backtop = $(window).scrollTop();
+		var pageLookHeight = document.documentElement.clientHeight;
+		$(window).scrollTop(backtop + pageLookHeight / 2 + 50);
 	};
 
 }]);
