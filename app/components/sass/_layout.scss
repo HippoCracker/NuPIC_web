@@ -65,6 +65,38 @@ Small --> Medium
 		width: 150px;
 	}//download-options
 
+	.left-side {
+		left: 5px;
+	}//left-side
+
+	.right-side {
+		right: 5px;
+	}//right-side
+
+	.side-btn {
+		display: block;
+		width: 30px;
+		height: 30px;
+		line-height: 30px;
+		color: $darkgray;
+		background: $lightgray;
+		font-size: 1rem;
+	}//side-btn
+
+	.nav-options {
+		li {
+			width: 100px;
+		}//li
+
+		a {
+			font-size: .9rem;
+			font-weight: 400;
+		}//a
+	}//nav-options
+
+	.chart-container {
+		width: 90%;
+	}//chart-container
 }// $small --> $medium
 
 
@@ -77,7 +109,7 @@ Medium --> large
 		font-size: 3rem;
 		height: 240px;
 	}//banner
-	
+
 	.menu {
 		@include span(2);
 	}//menu
@@ -101,11 +133,43 @@ Medium --> large
 	.process-results {
 		padding: 80px 30px;
 	}//process-results
-	
+
 	.download-options {
 		width: 420px;
 	}//download-options
 
+	.left-side {
+		left: 5px;
+	}//left-side
+
+	.right-side {
+		right: 5px;
+	}//right-side
+
+	.side-btn {
+		display: block;
+		width: 30px;
+		height: 30px;
+		line-height: 30px;
+		color: $darkgray;
+		background: $lightgray;
+		font-size: 1rem;
+	}//side-btn
+
+	.nav-options {
+		li {
+			width: 120px;
+		}//li
+
+		a {
+			font-size: 1rem;
+			font-weight: 400;
+		}//a
+	}//nav-options
+
+	.chart-container {
+		width: 80%;
+	}//chart-container
 
 }// $medium --> $large
 
@@ -153,4 +217,36 @@ large
 		line-height: 200px;
 	}//download-options-container
 
+	.left-side {
+		left: 50px;
+	}//left-side
+
+	.right-side {
+		right: 50px;
+	}//right-side
+
+	.side-btn {
+		display: block;
+		width: 50px;
+		height: 50px;
+		line-height: 50px;
+		color: $darkgray;
+		background: $lightgray;
+		font-size: 1.4rem;
+	}//side-btn
+
+	.nav-options {
+		li {
+			width: 140px;
+		}//li
+
+		a {
+			font-size: 1.2rem;
+			font-weight: 500;
+		}//a
+	}//nav-options
+
+	.chart-container {
+		width: 80%;
+	}//chart-container
 }// $medium 

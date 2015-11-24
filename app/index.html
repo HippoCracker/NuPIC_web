@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" href="css/style.css">
 </head>
-<body ng-controller="MainCtrl">
+<body id="page" ng-controller="MainCtrl">
 	<header class="nav-bar">
 		<div class="wrap">
 			<section class="menu-btn">
@@ -127,18 +127,26 @@
 							<li><a href="#" class="download-btn">csv</a></li>
 						</ul>
 					</section><!-- download-options-container -->
+					<section class="chart-container">
+						<div class="chart">
+							<canvas id="line-chart" class="chart line-chart"></canvas>
+						</div><!-- chart -->				
+						<div class="chart">
+							<canvas id="bar-chart" class="chart bar-chart"></canvas>
+						</div><!-- chart -->				
+					</section>
 				</div><!-- result-container -->
 			</section><!-- process-results-container -->
 		</div><!-- wrap -->
 	</div><!-- contents -->
 
-	<div class="side-btn-container left-side">
-		<div class="previous-error-btn side-btn"><i class="fa fa-arrow-up"></i></div>
-		<div class="next-error-btn side-btn"><i class="fa fa-arrow-down"></i></div>
+	<div id="nav-btn-container" class="side-btn-container left-side">
+		<div id="previous-btn" class="previous-error-btn side-btn"><i class="fa fa-arrow-up"></i></div>
+		<div id="next-btn" class="next-error-btn side-btn"><i class="fa fa-arrow-down"></i></div>
 	</div><!-- side-btn -->
 
-	<div class="side-btn-container right-side">
-		<div class="previous-error-btn side-btn"><i class="fa fa-arrow-up"></i></div>
+	<div id="backtop-btn-container" class="side-btn-container right-side">
+		<div id="backtop-btn" class="side-btn"><i class="fa fa-arrow-up"></i></div>
 	</div><!-- side-btn -->
 
 	<footer>
@@ -169,13 +177,16 @@
 	<script src="http://localhost:35729/livereload.js"></script>
 
 	<!-- bower:js -->
-	<script src="../bower_components/angular/angular.js"></script>
-	<script src="../bower_components/ng-file-upload/ng-file-upload.js"></script>
+	<script src="js/angular.js"></script>
+	<script src="js/ng-file-upload.js"></script>
+	<script src="js/Chart.js"></script>
 	<!-- endbower -->
 
 	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-	<script src="js/main.js"></script>
+	<script src="components/js/dom.js"></script>
+	<script src="components/js/controller.js"></script>
+	<!--<script src="js/main.js"></script>-->
 	
 </body>
 </html>

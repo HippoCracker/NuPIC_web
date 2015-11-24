@@ -28,6 +28,7 @@ module.exports = function(grunt) {
 												'<%= config.app %>/components/js/main.js',
 												'<%= config.app %>/components/js/controller.js',
 												'<%= config.app %>/components/js/dom.js',
+												'<%= config.app %>/components/js/chart_conf.js',
 												]
 				}
 			},//app
@@ -57,7 +58,8 @@ module.exports = function(grunt) {
 				files: [
 								'<%= config.app %>/components/js/main.js',
 								'<%= config.app %>/components/js/controller.js',
-								'<%= config.app %>/components/js/dom.js'
+								'<%= config.app %>/components/js/dom.js',
+								'<%= config.app %>/components/js/chart_conf.js',
 							 ],
 				tasks: ['uglify:app']
 			}, //scripts
@@ -79,8 +81,9 @@ module.exports = function(grunt) {
 		php: {
 			dist: {
 				options: {
-					base: 'app',
-					port: 8000,
+					base: '<%= config.app %>',
+					port: 5000,
+					keepalive: true,
 					open: true
 				}//options
 			}//dist

@@ -44,7 +44,7 @@ neuApp.controller('MainCtrl',
 			 	]
 			},
 			{
-				"status":true,
+				"status":false,
 			  "words":[
 			 		{"word":"Another","tag":"noun"},
 			 		{"word":"sentence","tag":"verb"},
@@ -60,7 +60,7 @@ neuApp.controller('MainCtrl',
 			 	]
 			},
 			{
-				"status":true,
+				"status":false,
 			  "words":[
 			 		{"word":"Another","tag":"noun"},
 			 		{"word":"sentence","tag":"verb"},
@@ -118,12 +118,13 @@ neuApp.controller('MainCtrl',
 				method: 'GET',
 				data: { file: file }
 			}).then(function (resp) {
-				var data = resp.data;
-				$scope.sentences = data.sentences;
+				// var data = resp.data;
+				// $scope.sentences = data.sentences;
 			});
 			$scope.$apply();
 			$(".loading-effect-container").fadeOut(500);
 			$(".process-results-container").fadeIn(200);
+			$("#nav-btn-container").fadeIn(600);
 		}
 	};
 
